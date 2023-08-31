@@ -38,13 +38,13 @@ In this workshop, we will demonstrate how Quarto enables data scientists to turn
 
 | Time        | Module                                        |
 |-------------|-----------------------------------------------|
-| 1:15 - 1:45 | [Slides in Quarto](4-slides/) w/ Emil Hansen|
-| 1:45 - 1:55 | 10 min break                                  |
-| 1:55 - 2:20  | [nbdev](https://nbdev.fast.ai) w/Hamel Husain |
-| 2:20 - 2:30 | 10 min break                                  |
-| 2:30 - 3:20 | [ShinyLive For Python](https://shiny.posit.co/py/docs/shinylive.html) w/Gordon Shotwell |
-| 3:20 - 3:30 | 10 min break                           |
-| 3:30 - 4:20 | [Quartodoc](https://github.com/machow/quartodoc) w/Michael Chow              |
+| 1:15 - 1:40 | [nbdev](https://nbdev.fast.ai) w/Hamel Husain | 
+| 1:40 - 1:50 | 10 min break                                  |
+| 1:50 - 2:40 | [ShinyLive For Python](https://shiny.posit.co/py/docs/shinylive.html) w/Gordon Shotwell |
+| 2:40 - 3:00 | 20 min break                                   |
+| 3:00 - 3:30 | [Slides in Quarto](4-slides/) w/ Emil Hansen   |
+| 3:30 - 3:40 | 10 min break                           |
+| 3:40 - 4:20 | [Quartodoc](https://github.com/machow/quartodoc) w/Michael Chow              |
 | 4:20 - 4:30 | 10 min break                           |
 | 4:30 - 5:00 | Q&A With Quarto Team (move rooms)      |
 

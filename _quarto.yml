@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Quarto for Python devs"
+  description: "Posit::Conf 2023"
+  repo-url: https://github.com/hamelsmu/posit-python-quarto
+  page-footer:
+    left: "&copy; Copyright 2023, Hamel Husain"
+    center:
+      - icon: github
+        href: https://github.com/orgs/hamelsmu
+    right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
+  open-graph: true
+
+format:
+  html:
+    code-copy: true
+    theme: cosmo
+    css: styles.css
+    toc: true

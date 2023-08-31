@@ -1,0 +1,47 @@
+---
+title: "Setup"
+subtitle: "Setting up your environment"
+footer: "[Hamel Husain](https://hamel.dev)"
+format:
+  revealjs:
+    author:
+      - "Hamel Husain"
+    institute: "Parlance Labs"
+    transition: fade
+    slide-number: true
+    chalkboard: false
+    theme: [../style/quarto.scss, ../style/slides.scss]
+---
+
+## Let's Setup all the tools
+
+- [ ] [Quarto](https://quarto.org/docs/get-started/)
+- [ ] [VS Code extensions](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+- [ ] [Jupyter plugin](https://quarto.org/docs/tools/jupyter-lab-extension.html#installing-the-extension)
+- [ ] [gh cli](https://github.com/cli/cli) for GitHub
+
+## Quarto
+
+- Stable: [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+- Pre-release: [https://quarto.org/docs/download/prerelease](https://quarto.org/docs/download/prerelease)
+
+
+Read the pre-release highlights to get a sense of new features
+
+## Resources
+
+The best way to learn is by example.  Here are the best examples:
+
+- [ ] [The Official website](https://github.com/quarto-dev/quarto-web) 
+        - Click "Edit this page" to see the source.
+- [ ] [The Gallery](https://quarto.org/docs/gallery/)
+
+:::{.callout-tip}
+
+If  no "Edit this page" button, you can [search](https://github.com/search) a user's GitHub like this:
+
+
+`owner:username path:_quarto.yml`
+
+[Example](https://github.com/search?q=owner%3Ahamelsmu+path%3A_quarto.yml&type=code)
+:::

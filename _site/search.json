@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto For Python Devs",
+    "section": "",
+    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter notebooks and Quarto with the help of nbdev."
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "Quarto For Python Devs",
+    "section": "Instructor",
+    "text": "Instructor\nHamel is a founder at Parlance, a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his personal site."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": ".",
+    "section": "",
+    "text": "learn how to author content in IPython/Jupyter and the Quarto VS Code extension.\nleverage Quarto for creating different types of publications, including personal blogs, knowledge management for teams, notes, books, websites, and presentation slides.\nhost websites and publications on platforms such as GitHub Pages, QuartoPub, and Netlify.\ntest notebooks and documentation with Quarto’s execution options,\nextend Quarto with notebook filters and extensions."
+  },
+  {
+    "objectID": "1-setup/index.html",
+    "href": "1-setup/index.html",
+    "title": "Setup",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "1-setup/index.html#slides",
+    "href": "1-setup/index.html#slides",
+    "title": "Setup",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#lets-setup-all-the-tools",
+    "href": "1-setup/1-setup.html#lets-setup-all-the-tools",
+    "title": "Setup",
+    "section": "Let’s Setup all the tools",
+    "text": "Let’s Setup all the tools\n\nQuarto\nVS Code extensions\nJupyter plugin\ngh cli for GitHub"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#lets-setup-all-the-tools-we-need",
+    "href": "1-setup/1-setup.html#lets-setup-all-the-tools-we-need",
+    "title": "Setup",
+    "section": "Let’s setup all the tools we need",
+    "text": "Let’s setup all the tools we need\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#section",
+    "href": "1-setup/1-setup.html#section",
+    "title": "Setup",
+    "section": "",
+    "text": "Hamel Husain"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#quarto",
+    "href": "1-setup/1-setup.html#quarto",
+    "title": "Setup",
+    "section": "Quarto",
+    "text": "Quarto\n\nStable: https://quarto.org/docs/get-started/\nPre-release: https://quarto.org/docs/download/prerelease\n\nRead the pre-release highlights to get a sense of new features"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#a-pre-rela",
+    "href": "1-setup/1-setup.html#a-pre-rela",
+    "title": "Setup",
+    "section": "A Pre-rela",
+    "text": "A Pre-rela\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#a-pre-relase-of-quarto",
+    "href": "1-setup/1-setup.html#a-pre-relase-of-quarto",
+    "title": "Setup",
+    "section": "A Pre-relase of Quarto",
+    "text": "A Pre-relase of Quarto\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "1-setup/1-setup.html#resources",
+    "href": "1-setup/1-setup.html#resources",
+    "title": "Setup",
+    "section": "Resources",
+    "text": "Resources\nThe best way to learn is by example. Here are the best examples:\n\nThe Official website - Click “Edit this page” to see the source.\nThe Gallery\n\n\n\n\n\n\n\n\n\n\nIf no “Edit this page” button, you can search a user’s GitHub like this:\nowner:username path:_quarto.yml\nExample\n\n\n\n\n\nHamel Husain"
+  }
+]

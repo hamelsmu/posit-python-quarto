@@ -1,0 +1,54 @@
+---
+title: "Quarto For Python Devs"
+subtitle: "Posit::Conf 2023"
+format:
+  html:
+    toc: false
+---
+
+
+> 9:00 AM - 5:00 PM CDT
+> Monday, Sep 18, 2023
+
+Sharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.
+
+Enter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.
+
+In this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter notebooks and Quarto with the help of nbdev.
+
+### In the Morning
+
+#### Core Quarto
+
+| Time          | Module                              |
+|---------------|-------------------------------------|
+| 9:00 - 09:15   | [Quarto Setup](1-setup/)   |
+| 9:15 - 09:40   | [Intro](https://docs.google.com/presentation/d/1KHqNdHdBSoUYa8QoMfhRS-R5hzqhBiOqdffqOA-jml8/edit?usp=sharing)   |
+| 9:40 - 10:10   | [Quarto Basics](3-basics/)   |
+| 10:10 - 10:30   | 20 min break                               |
+| 10:30 - 11:00  | [Configuration & Options](4-config/)         |
+| 11:00 - 11:15  | [Publishing](5-publish/)         |
+| 11:15 - 11:30  |  20 min break                     |
+| 11:30 - 12:00  |  [Notebook Filters & Other Tricks](3-nb-filters/)      |
+| 12:00 - 1:15  |  Lunch                        |
+
+### In the Afternoon
+
+#### Quarto-Python Ecosystem
+
+| Time        | Module                                        |
+|-------------|-----------------------------------------------|
+| 1:15 - 1:45 | [Slides in Quarto](4-slides/) w/ Emil Hansen|
+| 1:45 - 1:55 | 10 min break                                  |
+| 1:55 - 2:20  | [nbdev](https://nbdev.fast.ai) w/Hamel Husain |
+| 2:20 - 2:30 | 10 min break                                  |
+| 2:30 - 3:20 | [ShinyLive For Python](https://shiny.posit.co/py/docs/shinylive.html) w/Gordon Shotwell |
+| 3:20 - 3:30 | 10 min break                           |
+| 3:30 - 4:20 | [Quartodoc](https://github.com/machow/quartodoc) w/Michael Chow              |
+| 4:20 - 4:30 | 10 min break                           |
+| 4:30 - 5:00 | Q&A With Quarto Team (move rooms)      |
+
+
+## Instructor
+
+Hamel is a founder at [Parlance](https://parlance-labs.com), a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his [personal site](https://hamel.dev/).

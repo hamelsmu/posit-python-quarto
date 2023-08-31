@@ -1,0 +1,162 @@
+---
+title: "Basics"
+subtitle: "Getting Started With Quarto"
+footer: "[Hamel Husain](https://hamel.dev)"
+format:
+  revealjs:
+    author:
+      - "Hamel Husain"
+    institute: "Parlance Labs"
+    transition: fade
+    slide-number: true
+    chalkboard: false
+    theme: [../style/quarto.scss, ../style/slides.scss]
+---
+
+## Create a new project (website)
+
+::: {.fragment .fade-in-then-semi-out}
+
+Create a new GitHub repo and clone it locally
+
+```bash
+gh repo create my-quarto-website --clone --public
+```
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+
+Initialize the quarto project
+
+
+```bash
+quarto create project
+```
+:::
+::: {.fragment .fade-in-then-semi-out}
+
+or 
+
+```bash
+quarto create project website mysite
+```
+:::
+
+:::aside
+See [creating a website](https://quarto.org/docs/websites/)
+:::
+
+## Preview Site
+
+::: {.fragment .fade-in-then-semi-out}
+```bash
+quarto preview
+```
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Now, try to change some contents and see what happens.
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+The `_site` folder contains the html files that are generated.  
+You can serve this site with any web server.
+:::
+::: {.fragment .fade-in-then-semi-out}
+For example, with Python:
+
+```bash
+python -m http.server --d _site
+```
+Your site will be served at localhost:8000
+:::
+
+## Look at the help!
+
+When starting out, its helpful to look at the help for every command.
+
+```{bash}
+quarto preview --help
+```
+
+:::{.fragment .fade-in-then-semi-out}
+
+:::{.callout-tip}
+### Debugging Tips
+1. Preview a single document `quarto preview somefile.qmd`
+2. ` --log-level error` can help you focus on what is important
+3. Delete the `_site` folder
+:::
+
+:::
+
+## Tips for starting out
+
+:::{.fragment .fade-in-then-semi-out}
+1. **Do not** create a new site from **scratch**
+2. Find a website you like, and start editing it.  It's easiest to **learn by example.**
+3. One of the best examples is the **[source code](https://github.com/quarto-dev/quarto-web) for the official Quarto docs**, since they demonstrate all of the features of Quarto!
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+Learn to navigate the [Quarto docs](https://quarto.org/docs/) website.
+:::
+
+:::aside
+This site was created from [this repo](https://github.com/asa-quarto/website).
+:::
+
+## Navigating Quarto Docs
+
+::: columns
+:::: {.column width="50%"}
+```{.yaml filename="_quarto.yml"}
+project:
+  type: website
+
+website:
+  title: "Quarto for Python devs"
+  description: "Posit::Conf 2023"
+  ...
+
+format:
+  html:
+    ...
+  revealjs: 
+    ...
+```
+:::
+
+:::: {.column width="50%"}
+
+Start with the [reference page](https://quarto.org/docs/reference/) page, where you will see:
+
+
+:::{.fragment .fade-in-then-semi-out}
+- [Projects](https://quarto.org/docs/reference/projects/options.html) ([`website`](https://quarto.org/docs/reference/projects/websites.html), `book` etc.)
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+- [Formats](https://quarto.org/docs/reference/formats/html.html) (`html`, `revealjs`, `pdf`, etc..)  
+
+:::{.callout-tip}
+Many formats have the same options and are repeated in the docs.
+:::
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+Also see the [project guide](https://quarto.org/docs/projects/quarto-projects.html)
+:::
+
+:::
+:::
+
+## Using VSCode
+
+When authoring `_quarto.yml` or `.qmd` files, its best to use VSCode with the quarto extension.
+
+TODO: recommendation on notebooks?
+
+

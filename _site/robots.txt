@@ -1,1 +1,0 @@
-Sitemap: https://hamelsmu.github.io/posit-python-quarto/sitemap.xml

@@ -22,9 +22,9 @@ In this workshop, we will demonstrate how Quarto enables data scientists to turn
 
 | Time          | Module                              |
 |---------------|-------------------------------------|
-| 9:00 - 09:15   | [Quarto Setup](1-setup/)   |
-| 9:15 - 09:40   | [Intro](https://docs.google.com/presentation/d/1KHqNdHdBSoUYa8QoMfhRS-R5hzqhBiOqdffqOA-jml8/edit?usp=sharing)   |
-| 9:40 - 10:10   | [Quarto Basics](3-basics/)   |
+| 9:00 - 09:15   | [Quarto Setup](1_setup/)   |
+| 9:15 - 09:40   | [Intro](2_intro)   |
+| 9:40 - 10:10   | [Quarto Basics](3_basics/)   |
 | 10:10 - 10:30   | 20 min break                               |
 | 10:30 - 11:00  | [Configuration & Options](4-config/)         |
 | 11:00 - 11:15  | [Publishing](5-publish/)         |

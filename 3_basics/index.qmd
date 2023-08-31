@@ -1,0 +1,12 @@
+---
+title: "Basics"
+order: 3
+---
+
+## Slides
+
+[View slides in full screen](3-basics.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="3-basics.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```

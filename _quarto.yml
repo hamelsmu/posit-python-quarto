@@ -13,6 +13,20 @@ website:
         href: https://github.com/orgs/hamelsmu
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
   open-graph: true
+  sidebar:
+    pinned: true
+    align: center
+    style: docked
+    search: true
+    collapse: false
+    contents: 
+      - index.qmd
+      - text: Setup
+        href: 1_setup/index.qmd
+      - text: Intro
+        href: 2_intro/index.qmd
+      - text: Basics
+        href: 3_basics/index.qmd
 
 format:
   html:
@@ -20,3 +34,5 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+  revealjs: 
+    code-line-numbers: false

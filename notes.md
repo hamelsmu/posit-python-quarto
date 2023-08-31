@@ -3,3 +3,7 @@
 - host websites and publications on platforms such as GitHub Pages, QuartoPub, and Netlify.
 - test notebooks and documentation with Quarto’s execution options,
 - extend Quarto with notebook filters and extensions.
+
+
+execute:
+  freeze: false

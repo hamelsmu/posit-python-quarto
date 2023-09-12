@@ -1,23 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hamelsmu.github.io/posit-python-quarto/notes.html</loc>
-    <lastmod>2023-08-31T00:05:53.247Z</lastmod>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/2_intro/index.html</loc>
+    <lastmod>2023-09-12T20:00:20.354Z</lastmod>
   </url>
   <url>
-    <loc>https://hamelsmu.github.io/posit-python-quarto/index.html</loc>
-    <lastmod>2023-08-31T00:29:38.176Z</lastmod>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/1_setup/index.html</loc>
+    <lastmod>2023-09-12T20:00:19.770Z</lastmod>
   </url>
   <url>
-    <loc>https://hamelsmu.github.io/posit-python-quarto/1-setup/index.html</loc>
-    <lastmod>2023-08-31T00:05:53.212Z</lastmod>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/index.html</loc>
+    <lastmod>2023-09-12T20:00:15.790Z</lastmod>
   </url>
   <url>
-    <loc>https://hamelsmu.github.io/posit-python-quarto/1-setup/1-setup.html</loc>
-    <lastmod>2023-08-31T00:05:53.211Z</lastmod>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/5_publishing/5-pub.html</loc>
+    <lastmod>2023-09-12T20:00:14.350Z</lastmod>
   </url>
   <url>
-    <loc>https://hamelsmu.github.io/posit-python-quarto/about.html</loc>
-    <lastmod>2023-08-31T00:05:53.247Z</lastmod>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/index.html</loc>
+    <lastmod>2023-09-12T20:00:13.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/4_config/index.html</loc>
+    <lastmod>2023-09-12T20:00:11.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/4_config/4-config.html</loc>
+    <lastmod>2023-09-12T20:00:12.949Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/5_publishing/index.html</loc>
+    <lastmod>2023-09-12T20:00:13.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/demo.html</loc>
+    <lastmod>2023-09-12T20:00:14.654Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/3-basics.html</loc>
+    <lastmod>2023-09-12T20:00:19.466Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/1_setup/1-setup.html</loc>
+    <lastmod>2023-09-12T20:00:20.062Z</lastmod>
   </url>
 </urlset>

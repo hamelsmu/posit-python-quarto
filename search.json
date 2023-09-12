@@ -1,17 +1,80 @@
 [
   {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Quarto for Python devs",
+    "objectID": "2_intro/index.html",
+    "href": "2_intro/index.html",
+    "title": "Intro",
     "section": "",
-    "text": "learn how to author content in IPython/Jupyter and the Quarto VS Code extension.\nleverage Quarto for creating different types of publications, including personal blogs, knowledge management for teams, notes, books, websites, and presentation slides.\nhost websites and publications on platforms such as GitHub Pages, QuartoPub, and Netlify.\ntest notebooks and documentation with Quarto’s execution options,\nextend Quarto with notebook filters and extensions."
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "2_intro/index.html#slides",
+    "href": "2_intro/index.html#slides",
+    "title": "Intro",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "1_setup/index.html",
+    "href": "1_setup/index.html",
+    "title": "Setup",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "1_setup/index.html#slides",
+    "href": "1_setup/index.html#slides",
+    "title": "Setup",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "3_basics/index.html",
+    "href": "3_basics/index.html",
+    "title": "Basics",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "3_basics/index.html#slides",
+    "href": "3_basics/index.html#slides",
+    "title": "Basics",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#background",
+    "href": "5_publishing/5-pub.html#background",
+    "title": "Publishing",
+    "section": "Background",
+    "text": "Background\n\nRender your site quarto render\n\nThis put static files in _site/ by default, but can change it with the output-dir setting:\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: _site\n\n\nThe _site/ folder is a static site you can deploy anywhere. Ex: python -m http.server --d _site/\nPreview your site quarto preview"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#intro",
+    "href": "5_publishing/5-pub.html#intro",
+    "title": "Publishing",
+    "section": "Intro",
+    "text": "Intro\nEasiest way to get started:\nquarto publish --help\nBuilt in targets:\n\nQuarto Pub (quarto-pub)\nGitHub Pages (gh-pages)\nPosit Connect (connect)\nNetlify (netlify)\nConfluence (confluence)"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#github-pages",
+    "href": "5_publishing/5-pub.html#github-pages",
+    "title": "Publishing",
+    "section": "GitHub Pages",
+    "text": "GitHub Pages\n\nIt’s free\nCannot get private pages without paying.\n\nquarto publish\n\n\n\n\n\n\nEnable GitHub Pages\n\n\nMake sure you enable GitHub Pages in your repo settings."
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#github-actions",
+    "href": "5_publishing/5-pub.html#github-actions",
+    "title": "Publishing",
+    "section": "GitHub Actions",
+    "text": "GitHub Actions\nSee this repo, specifically this example:\nname: pub\non: \n    push:\n        branches: main\n\njobs:\n    pub:\n        runs-on: ubuntu-latest\n        steps:\n        - name: Check out repository\n          uses: actions/checkout@v4\n        - name: setup Python\n          uses: actions/setup-python@v3\n        - name: install Jupyter\n          run: python3 -m pip install jupyter\n        - name: Install Quarto\n          uses: quarto-dev/quarto-actions/setup@v2\n        - name: Publish to GitHub Pages (and render)\n          uses: quarto-dev/quarto-actions/publish@v2\n          with:\n            target: gh-pages\n\n\nHamel Husain"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Quarto For Python Devs",
     "section": "",
-    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter notebooks and Quarto with the help of nbdev."
+    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter Notebooks and Quarto with the help of nbdev."
   },
   {
     "objectID": "index.html#instructor",
@@ -21,45 +84,178 @@
     "text": "Instructor\nHamel is a founder at Parlance, a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his personal site."
   },
   {
-    "objectID": "1-setup/index.html",
-    "href": "1-setup/index.html",
-    "title": "Setup",
+    "objectID": "4_config/index.html",
+    "href": "4_config/index.html",
+    "title": "Configuration and Options",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "1-setup/index.html#slides",
-    "href": "1-setup/index.html#slides",
-    "title": "Setup",
+    "objectID": "4_config/index.html#slides",
+    "href": "4_config/index.html#slides",
+    "title": "Configuration and Options",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "1-setup/1-setup.html#lets-setup-all-the-tools",
-    "href": "1-setup/1-setup.html#lets-setup-all-the-tools",
+    "objectID": "4_config/4-config.html#hierachy",
+    "href": "4_config/4-config.html#hierachy",
+    "title": "Config & Options",
+    "section": "Hierachy",
+    "text": "Hierachy\nCells &gt; Front Matter &gt; Project Level\nFor example, see the reference docs:\n\nCells: see code cells.\nFront matter: see HTML format.\nProject Level: see project options some of these can also live in front-matter.\n\nThere is overlap! See echo:false in cell options, vs execute: echo:false in front matter."
+  },
+  {
+    "objectID": "4_config/4-config.html#directory-level-config",
+    "href": "4_config/4-config.html#directory-level-config",
+    "title": "Config & Options",
+    "section": "Directory Level Config",
+    "text": "Directory Level Config\n\nUse _metadata.yml, which gets merged.\nThe more specific config controls (cell &gt; front matter &gt; project).\nBreaking _quarto.yml into multiple files using metadata-files: [config.yml].\n\nThis can also be used in front matter: see this example, which you can also find in the docs."
+  },
+  {
+    "objectID": "4_config/4-config.html#cell-options",
+    "href": "4_config/4-config.html#cell-options",
+    "title": "Config & Options",
+    "section": "Cell Options",
+    "text": "Cell Options\nUse the #| syntax to specify cell options:\n#| echo: false\nprint('hello')\n\nMy favorite cell options:\n\neval: evaluate code cells\necho: show/hide code cells\noutput: show/hide cell output\ninclude: show/hide cell input & output (catch-all)\n\nSee more.\n\n\n\n\n\n\nLook at the source\n\n\nI looked at this page when making this slide."
+  },
+  {
+    "objectID": "4_config/4-config.html#execution-options",
+    "href": "4_config/4-config.html#execution-options",
+    "title": "Config & Options",
+    "section": "Execution Options",
+    "text": "Execution Options\nEngine binding:\njupyter:\n  kernelspec:\n    display_name: Python 3\n    language: python\n    name: python3\nexecute:\n  echo: false\nOutput Options:\nAs an example, let’s consider echo:false, this can also be in front matter:\n\n\nquarto.yml\n\nexecute: \n  echo: false\n\nFreezing\nexecute:\n  freeze: true  # never re-render during project render\nexecute:\n  freeze: auto # re-render ONLY if source changes"
+  },
+  {
+    "objectID": "4_config/4-config.html#jupyter-cache",
+    "href": "4_config/4-config.html#jupyter-cache",
+    "title": "Config & Options",
+    "section": "Jupyter Cache",
+    "text": "Jupyter Cache\nTo use Jupyter Cache you’ll want to first install the jupyter-cache package:\n\n\n\n\n\n\n\nPlatform\nCommand\n\n\n\n\nMac/Linux\n\n\nTerminal\n\npython3 -m pip install jupyter-cache\n\n\n\nWindows\n\n\nTerminal\n\npy -m pip install jupyter-cache"
+  },
+  {
+    "objectID": "4_config/4-config.html#jupyter-cache-options",
+    "href": "4_config/4-config.html#jupyter-cache-options",
+    "title": "Config & Options",
+    "section": "Jupyter Cache Options",
+    "text": "Jupyter Cache Options\nTo enable the cache for a document, add the cache option. For example:\n---\ntitle: \"My Document\"\nformat: html\nexecute: \n  cache: true\n---\nYou can also specify caching at the project level in the _quarto.yml file:\nexecute:\n  cache: true\nAnd also at a cell level:\n#| cache: true\ndef foo(): ...\nSee execution options."
+  },
+  {
+    "objectID": "4_config/4-config.html#new-features-in-quarto-1.4",
+    "href": "4_config/4-config.html#new-features-in-quarto-1.4",
+    "title": "Config & Options",
+    "section": "New features in Quarto 1.4",
+    "text": "New features in Quarto 1.4\n\nInline Execution\nRendering script files\n\nSee the release notes here and on GitHub."
+  },
+  {
+    "objectID": "4_config/4-config.html#what-i-do-as-a-python-developer",
+    "href": "4_config/4-config.html#what-i-do-as-a-python-developer",
+    "title": "Config & Options",
+    "section": "What I do as a Python developer",
+    "text": "What I do as a Python developer\n\nUse notebooks anytime there is code.\nUse .qmd with VSCode if not much code.\nUse cell options heavily.\nSometimes, I want to disable an entire notebook from running, so I use execute: false in front matter.\n\nexecute:\n  eval: false\n\nUsing shell commands with iPython magic with !.\nMost importantly: look at examples!\n\n\n\n\nI like #|eval: false in notebooks, b/c unlike .qmd, output is saved.\nI also helped develop a way to develop entire Python libraries with notebooks that leverages Quarto called nbdev, which I’ll talk about in the afternoon."
+  },
+  {
+    "objectID": "4_config/4-config.html#make-your-code-more-visibile",
+    "href": "4_config/4-config.html#make-your-code-more-visibile",
+    "title": "Config & Options",
+    "section": "Make your code more visibile",
+    "text": "Make your code more visibile\nUse GitHub links:\nwebsite:\n  repo-url: https://github.com/quarto-dev/quarto-demo\n  repo-actions: [edit, issue]\nYou can also set a specific branch, ex: repo-branch: master.\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "5_publishing/index.html",
+    "href": "5_publishing/index.html",
+    "title": "Publishing",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "5_publishing/index.html#slides",
+    "href": "5_publishing/index.html#slides",
+    "title": "Publishing",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "3_basics/demo.html",
+    "href": "3_basics/demo.html",
+    "title": "Demo Quarto Notebook",
+    "section": "",
+    "text": "a = 10\nb = 20\n\n\nimport pandas as pd\npd.DataFrame({\"a\": [1,2,3], \"b\": [4,5,6]})"
+  },
+  {
+    "objectID": "3_basics/3-basics.html#create-a-new-project-website",
+    "href": "3_basics/3-basics.html#create-a-new-project-website",
+    "title": "Basics",
+    "section": "Create a new project (website)",
+    "text": "Create a new project (website)\n\nCreate a new GitHub repo and clone it locally\ngh repo create my-quarto-website --clone --public\n\n\nInitialize the quarto project\nquarto create project\n\n\nor\nquarto create project website mysite\n\n\n\nSee creating a website"
+  },
+  {
+    "objectID": "3_basics/3-basics.html#preview-site",
+    "href": "3_basics/3-basics.html#preview-site",
+    "title": "Basics",
+    "section": "Preview Site",
+    "text": "Preview Site\n\nquarto preview\n\n\nNow, try to change some contents and see what happens.\n\n\nThe _site folder contains the html files that are generated.\nYou can serve this site with any web server.\n\n\nFor example, with Python:\npython -m http.server --d _site\nYour site will be served at localhost:8000"
+  },
+  {
+    "objectID": "3_basics/3-basics.html#look-at-the-help",
+    "href": "3_basics/3-basics.html#look-at-the-help",
+    "title": "Basics",
+    "section": "Look at the help!",
+    "text": "Look at the help!\nWhen starting out, its helpful to look at the help for every command.\nquarto preview --help\n\n\n\n\n\n\n\nDebugging Tips\n\n\n\nPreview a single document quarto preview somefile.qmd\n--log-level error can help you focus on what is important\nDelete the _site folder"
+  },
+  {
+    "objectID": "3_basics/3-basics.html#tips-for-starting-out",
+    "href": "3_basics/3-basics.html#tips-for-starting-out",
+    "title": "Basics",
+    "section": "Tips for starting out",
+    "text": "Tips for starting out\n\n\nDo not create a new site from scratch\n\n\n\n\nFind a website you like, and start editing it. It’s easiest to learn by example.\n\n\n\n\nOne of the best examples is the source code for the official Quarto docs, since they demonstrate all of the features of Quarto!\n\n\n\nLearn to navigate the Quarto docs website.\n\n\n\nThis site was created from this repo."
+  },
+  {
+    "objectID": "3_basics/3-basics.html#navigating-quarto-docs",
+    "href": "3_basics/3-basics.html#navigating-quarto-docs",
+    "title": "Basics",
+    "section": "Navigating Quarto Docs",
+    "text": "Navigating Quarto Docs\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n\nwebsite:\n  title: \"Quarto for Python devs\"\n  description: \"Posit::Conf 2023\"\n  ...\n\nformat:\n  html:\n    ...\n  revealjs: \n    ...\n\n\nStart with the reference page page, where you will see:\n\n\nProjects (website, book etc.)\n\n\n\n\nFormats (html, revealjs, pdf, etc..)\n\n\n\n\n\n\n\nTip\n\n\nMany formats have the same options and are repeated in the docs.\n\n\n\n\n\nAlso see the project guide"
+  },
+  {
+    "objectID": "3_basics/3-basics.html#using-vscode",
+    "href": "3_basics/3-basics.html#using-vscode",
+    "title": "Basics",
+    "section": "Using VSCode",
+    "text": "Using VSCode\nWhen authoring _quarto.yml or .qmd files, its best to use VSCode with the Quarto extension.\nWe will Demo this by opening the source code.\n\nCode blocks\n\n\na = 10\nb = 20\n\n\nc = a + b\n\n\nimport pandas as pd\npd.DataFrame({'col': [a,b,c]})\n\nMy Other favorite features:\n\nFront matter completion\n_quarto.yml\nrelative links\n\nAnd much more!"
+  },
+  {
+    "objectID": "3_basics/3-basics.html#using-notebooks",
+    "href": "3_basics/3-basics.html#using-notebooks",
+    "title": "Basics",
+    "section": "Using Notebooks",
+    "text": "Using Notebooks\nJupyterLab extension.\n\nRenders Quarto elements like Callouts, Divs, Mermaid, Front matter, etc.\nThe VSCode plugin is more fully featured. Use this if you prefer JupyterLab.\nStill get code block contextual help.\n\nRecommendation: Use VSCode Notebooks if possible (you also get CoPilot there).\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "1_setup/1-setup.html#lets-setup-all-the-tools",
+    "href": "1_setup/1-setup.html#lets-setup-all-the-tools",
     "title": "Setup",
     "section": "Let’s Setup all the tools",
     "text": "Let’s Setup all the tools\n\nQuarto\nVS Code extensions\nJupyter plugin\ngh cli for GitHub"
   },
   {
-    "objectID": "1-setup/1-setup.html#quarto",
-    "href": "1-setup/1-setup.html#quarto",
+    "objectID": "1_setup/1-setup.html#quarto",
+    "href": "1_setup/1-setup.html#quarto",
     "title": "Setup",
     "section": "Quarto",
     "text": "Quarto\n\nStable: https://quarto.org/docs/get-started/\nPre-release: https://quarto.org/docs/download/prerelease\n\nRead the pre-release highlights to get a sense of new features"
   },
   {
-    "objectID": "1-setup/1-setup.html#resources",
-    "href": "1-setup/1-setup.html#resources",
+    "objectID": "1_setup/1-setup.html#resources",
+    "href": "1_setup/1-setup.html#resources",
     "title": "Setup",
     "section": "Resources",
-    "text": "Resources\nThe best way to learn is by example. Here are the best examples:\n\nThe Official website - Click “Edit this page” to see the source.\nThe Gallery\n\n\n\n\n\n\n\n\n\n\nIf no “Edit this page” button, you can search a user’s GitHub like this:\nowner:username path:_quarto.yml\nExample\n\n\n\n\n\nHamel Husain"
+    "text": "Resources\nThe best way to learn is by example. Here are the best examples:\n\nThe Official website - Click “Edit this page” to see the source.\nThe Gallery\n\n\n\n\n\n\n\nTip\n\n\nIf no “Edit this page” button, you can search a user’s GitHub like this:\nowner:username path:_quarto.yml\nExample"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "objectID": "1_setup/1-setup.html#its-ok-to-copy",
+    "href": "1_setup/1-setup.html#its-ok-to-copy",
+    "title": "Setup",
+    "section": "It’s ok to copy!",
+    "text": "It’s ok to copy!\nPrior to this talk, I had had never made slides in Quarto, let alone embed them in a website. I followed Andrew Bray’s tutorial by modifying his code.\n\n\nHamel Husain"
   }
 ]

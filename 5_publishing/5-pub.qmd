@@ -1,0 +1,86 @@
+---
+title: "Publishing"
+subtitle: "Publishing your site"
+footer: "[Hamel Husain](https://hamel.dev)"
+format:
+  revealjs:
+    code-line-numbers: false
+    author:
+      - "Hamel Husain"
+    scrollable: true
+    institute: "Parlance Labs"
+    transition: fade
+    slide-number: true
+    chalkboard: false
+    theme: [../style/quarto.scss, ../style/slides.scss]
+---
+
+## Background
+
+- Render your site `quarto render`
+    - This put static files in `_site/` by default, but can change it with the `output-dir` setting:
+
+```{.yaml filename="_quarto.yml"}
+project:
+  type: website
+  output-dir: _site
+
+```
+- The `_site/` folder is a static site you can deploy anywhere.  Ex: `python -m http.server --d _site/`
+- Preview your site `quarto preview`
+
+
+## Intro 
+
+Easiest way to get started:
+
+```bash
+quarto publish --help
+```
+
+Built in targets:
+
+- Quarto Pub (quarto-pub)
+- GitHub Pages (gh-pages)
+- Posit Connect (connect)
+- Netlify (netlify)
+- Confluence (confluence)
+
+
+## GitHub Pages
+
+- It's free
+- Cannot get private pages without paying.
+
+```bash
+quarto publish
+```
+:::{.callout-warning}
+### Enable GitHub Pages
+Make sure you enable GitHub Pages in your repo settings.
+:::
+
+## GitHub Actions
+
+See [this repo](https://github.com/quarto-dev/quarto-actions/tree/main/publish), specifically [this example](https://github.com/quarto-dev/quarto-actions/blob/main/examples/quarto-publish-example.yml):
+
+```yaml
+name: pub
+on: 
+    push:
+        branches: main
+
+jobs:
+    pub:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Check out repository
+          uses: actions/checkout@v4
+        - name: Install Quarto
+          uses: quarto-dev/quarto-actions/setup@v2
+        - name: Publish to GitHub Pages (and render)
+          uses: quarto-dev/quarto-actions/publish@v2
+          with:
+            target: gh-pages
+```
+

@@ -1,0 +1,12 @@
+---
+title: "Configuration and Options"
+order: 4
+---
+
+## Slides
+
+[View slides in full screen](4-config.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="4-config.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```

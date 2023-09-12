@@ -7,6 +7,7 @@ execute:
 
 website:
   page-navigation: true
+  repo-actions: [edit, issue]
   title: "Quarto for Python devs"
   description: "Posit::Conf 2023"
   repo-url: https://github.com/hamelsmu/posit-python-quarto
@@ -16,6 +17,7 @@ website:
       - icon: github
         href: https://github.com/orgs/hamelsmu
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
+
   open-graph: true
   sidebar:
     pinned: true

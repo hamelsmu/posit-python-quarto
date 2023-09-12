@@ -4,6 +4,7 @@ subtitle: "Getting Started With Quarto"
 footer: "[Hamel Husain](https://hamel.dev)"
 format:
   revealjs:
+    code-line-numbers: false
     author:
       - "Hamel Husain"
     institute: "Parlance Labs"
@@ -95,16 +96,23 @@ quarto preview --help
 
 :::{.fragment .fade-in-then-semi-out}
 1. **Do not** create a new site from **scratch**
+:::
+
+:::{.fragment .fade-in-then-semi-out}
 2. Find a website you like, and start editing it.  It's easiest to **learn by example.**
+:::
+
+:::{.fragment .fade-in-then-semi-out}
 3. One of the best examples is the **[source code](https://github.com/quarto-dev/quarto-web) for the official Quarto docs**, since they demonstrate all of the features of Quarto!
 :::
 
 :::{.fragment .fade-in-then-semi-out}
 Learn to navigate the [Quarto docs](https://quarto.org/docs/) website.
-:::
 
 :::aside
 This site was created from [this repo](https://github.com/asa-quarto/website).
+:::
+
 :::
 
 ## Navigating Quarto Docs
@@ -155,8 +163,45 @@ Also see the [project guide](https://quarto.org/docs/projects/quarto-projects.ht
 
 ## Using VSCode
 
-When authoring `_quarto.yml` or `.qmd` files, its best to use VSCode with the quarto extension.
+When authoring `_quarto.yml` or `.qmd` files, its best to use VSCode with the [Quarto extension](https://quarto.org/docs/tools/vscode.html).
 
-TODO: recommendation on notebooks?
+We will Demo this by opening the [source code](https://github.com/hamelsmu/posit-python-quarto/blob/main/3_basics/3-basics.qmd).
 
+- Code blocks
+
+```{python}
+#|echo: true
+a = 10
+b = 20
+```
+
+```{python}
+#|echo: true
+c = a + b
+```
+
+```{python}
+#|echo: true
+#|output: false
+import pandas as pd
+pd.DataFrame({'col': [a,b,c]})
+```
+
+My Other favorite features:
+
+- Front matter completion
+- `_quarto.yml`
+- relative links
+
+And [much more](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)!
+
+## Using Notebooks
+
+JupyterLab [extension](https://quarto.org/docs/tools/jupyter-lab-extension.html).
+
+- Renders Quarto elements like Callouts, Divs, Mermaid, Front matter, etc. 
+- The VSCode plugin is more fully featured.  Use this if you prefer JupyterLab.
+- Still get code block contextual help.
+
+Recommendation: Use VSCode Notebooks if possible (you also get CoPilot there).
 

@@ -1,0 +1,183 @@
+---
+title: "Config & Options"
+subtitle: "Important Options and Config for Python Devs"
+footer: "[Hamel Husain](https://hamel.dev)"
+format:
+  revealjs:
+    code-line-numbers: false
+    author:
+      - "Hamel Husain"
+    scrollable: true
+    institute: "Parlance Labs"
+    transition: fade
+    slide-number: true
+    chalkboard: false
+    theme: [../style/quarto.scss, ../style/slides.scss]
+---
+
+## Hierachy
+
+**Cells > Front Matter > Project Level**
+
+For example, see the [reference docs](https://quarto.org/docs/reference/):
+
+- **Cells**: see [code cells](https://quarto.org/docs/reference/cells/).
+- **Front matter**: see [HTML format](https://quarto.org/docs/reference/formats/html.html).
+- **Project Level**: see [project options](https://quarto.org/docs/reference/projects/websites.html) some of these can also live in front-matter.
+
+There is overlap!  See `echo:false` in cell options, vs `execute: echo:false` in [front matter](https://quarto.org/docs/reference/formats/html.html#execution).
+
+## Directory Level Config
+
+- Use `_metadata.yml`, which gets [merged](https://quarto.org/docs/projects/quarto-projects.html#metadata-merging).
+- The more specific config controls (cell > front matter > project).
+- Breaking `_quarto.yml` into [multiple files](https://quarto.org/docs/projects/quarto-projects.html#metadata-includes) using `metadata-files: [config.yml]`.
+  - This can also be used in front matter: see [this example](https://github.com/hamelsmu/hamel/blob/master/notes/llm/inference/index.qmd), which you can also find in [the docs](https://quarto.org/docs/reference/formats/html.html#metadata).
+
+
+
+## Cell Options {.smaller}
+
+Use the `#|` syntax to specify cell options:
+
+```{.python}
+#| echo: false
+print('hello')
+```
+<br>
+
+
+#### My favorite cell options:
+
+- `eval`: evaluate code cells
+- `echo`: show/hide code cells
+- `output`: show/hide cell output
+- `include`: show/hide cell input & output (catch-all)
+
+See [more](https://quarto.org/docs/reference/cells/cells-jupyter.html).
+
+:::{.callout-tip}
+### Look at the source
+
+I looked at [this page](https://quarto.org/docs/authoring/notebook-embed.html#embedding-code) when making this slide.
+:::
+
+## Execution Options {.smaller}
+
+[Engine binding](https://quarto.org/docs/computations/execution-options.html#engine-binding):
+
+```yaml
+jupyter:
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+execute:
+  echo: false
+```
+
+[Output Options](https://quarto.org/docs/computations/execution-options.html#output-options):
+
+As an example, let's consider `echo:false`, this can also be in front matter:
+
+```{.yaml filename="quarto.yml"}
+execute: 
+  echo: false
+```
+
+### Freezing
+
+```yaml
+execute:
+  freeze: true  # never re-render during project render
+```
+
+```yaml
+execute:
+  freeze: auto # re-render ONLY if source changes
+```
+
+## Jupyter Cache
+
+To use Jupyter Cache you'll want to first install the `jupyter-cache` package:
+
++------------------+-----------------------------------------------+
+| Platform         | Command                                       |
++==================+===============================================+
+| Mac/Linux        | ``` {.bash filename="Terminal"}               |
+|                  | python3 -m pip install jupyter-cache          |
+|                  | ```                                           |
++------------------+-----------------------------------------------+
+| Windows          | ``` {.powershell filename="Terminal"}         |
+|                  | py -m pip install jupyter-cache               |
+|                  | ```                                           |
++------------------+-----------------------------------------------+
+
+## Jupyter Cache Options {.smaller}
+
+To enable the cache for a document, add the `cache` option. For example:
+
+``` yaml
+---
+title: "My Document"
+format: html
+execute: 
+  cache: true
+---
+```
+
+You can also specify caching at the project level in the `_quarto.yml` file:
+
+``` yaml
+execute:
+  cache: true
+```
+
+And also at a cell level:
+
+```python
+#| cache: true
+def foo(): ...
+```
+
+See [execution options](https://quarto.org/docs/reference/formats/html.html#execution).
+
+
+## New features in Quarto 1.4
+
+- [Inline Execution](https://quarto.org/docs/prerelease/1.4/inline.html)
+- [Rendering script files](https://quarto.org/docs/prerelease/1.4/script.html)
+
+See the release notes [here](https://quarto.org/docs/download/prerelease.html) and [on GitHub](https://github.com/quarto-dev/quarto-cli/releases).
+
+## What I do as a Python developer {.smaller}
+
+1. Use notebooks anytime there is code.
+2. Use `.qmd` with VSCode if not much code.
+3. Use [cell options](https://quarto.org/docs/reference/cells/cells-jupyter.html) heavily.
+4. Sometimes, I want to disable an entire notebook from running, so I use `execute: false` in front matter.
+```yaml
+execute:
+  eval: false
+```
+
+5. Using shell commands with iPython magic with `!`.
+6.  **Most importantly: look at examples!**
+
+:::{.aside}
+- I like `#|eval: false` in notebooks, b/c unlike `.qmd`, output is saved.
+
+- I also helped develop a way to develop entire Python libraries with notebooks that leverages Quarto called [nbdev](https://quarto.org/docs/prerelease/1.4/script.html), which I'll talk about in the afternoon.
+:::
+
+## Make your code more visibile
+
+Use [GitHub links](https://quarto.org/docs/websites/website-navigation.html#github-links):
+
+```yaml
+website:
+  repo-url: https://github.com/quarto-dev/quarto-demo
+  repo-actions: [edit, issue]
+```
+
+You can also set a specific branch, ex: `repo-branch: master`.

@@ -4,6 +4,7 @@ subtitle: "Setting up your environment"
 footer: "[Hamel Husain](https://hamel.dev)"
 format:
   revealjs:
+    code-line-numbers: false
     author:
       - "Hamel Husain"
     institute: "Parlance Labs"
@@ -36,6 +37,7 @@ The best way to learn is by example.  Here are the best examples:
         - Click "Edit this page" to see the source.
 - [ ] [The Gallery](https://quarto.org/docs/gallery/)
 
+
 :::{.callout-tip}
 
 If  no "Edit this page" button, you can [search](https://github.com/search) a user's GitHub like this:
@@ -45,3 +47,7 @@ If  no "Edit this page" button, you can [search](https://github.com/search) a us
 
 [Example](https://github.com/search?q=owner%3Ahamelsmu+path%3A_quarto.yml&type=code)
 :::
+
+## It's ok to copy!
+
+Prior to this talk, I had had never made slides in Quarto, let alone embed them in a website.  I followed [Andrew Bray's tutorial](https://andrew.quarto.pub/ohio-asa/) by modifying [his code](https://github.com/asa-quarto/website).

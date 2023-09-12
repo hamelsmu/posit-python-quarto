@@ -3,7 +3,5 @@
 - host websites and publications on platforms such as GitHub Pages, QuartoPub, and Netlify.
 - test notebooks and documentation with Quarto’s execution options,
 - extend Quarto with notebook filters and extensions.
+- Pre/post render scripts https://quarto.org/docs/projects/quarto-projects.html#metadata-merging
 
-
-execute:
-  freeze: false

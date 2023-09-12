@@ -1,50 +1,15 @@
 [
   {
-    "objectID": "3_basics/demo.html",
-    "href": "3_basics/demo.html",
-    "title": "Demo Quarto Notebook",
-    "section": "",
-    "text": "a = 10\nb = 20\n\n\nimport pandas as pd\npd.DataFrame({\"a\": [1,2,3], \"b\": [4,5,6]})"
-  },
-  {
-    "objectID": "3_basics/index.html",
-    "href": "3_basics/index.html",
-    "title": "Basics",
+    "objectID": "2_intro/index.html",
+    "href": "2_intro/index.html",
+    "title": "Intro",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "3_basics/index.html#slides",
-    "href": "3_basics/index.html#slides",
-    "title": "Basics",
-    "section": "",
-    "text": "View slides in full screen"
-  },
-  {
-    "objectID": "4_config/index.html",
-    "href": "4_config/index.html",
-    "title": "Configuration and Options",
-    "section": "",
-    "text": "View slides in full screen"
-  },
-  {
-    "objectID": "4_config/index.html#slides",
-    "href": "4_config/index.html#slides",
-    "title": "Configuration and Options",
-    "section": "",
-    "text": "View slides in full screen"
-  },
-  {
-    "objectID": "5_publishing/index.html",
-    "href": "5_publishing/index.html",
-    "title": "Publishing",
-    "section": "",
-    "text": "View slides in full screen"
-  },
-  {
-    "objectID": "5_publishing/index.html#slides",
-    "href": "5_publishing/index.html#slides",
-    "title": "Publishing",
+    "objectID": "2_intro/index.html#slides",
+    "href": "2_intro/index.html#slides",
+    "title": "Intro",
     "section": "",
     "text": "View slides in full screen"
   },
@@ -63,60 +28,18 @@
     "text": "View slides in full screen"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Quarto For Python Devs",
-    "section": "",
-    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter Notebooks and Quarto with the help of nbdev."
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "Quarto For Python Devs",
-    "section": "Instructor",
-    "text": "Instructor\nHamel is a founder at Parlance, a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his personal site."
-  },
-  {
-    "objectID": "2_intro/index.html",
-    "href": "2_intro/index.html",
-    "title": "Intro",
+    "objectID": "3_basics/index.html",
+    "href": "3_basics/index.html",
+    "title": "Basics",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "2_intro/index.html#slides",
-    "href": "2_intro/index.html#slides",
-    "title": "Intro",
+    "objectID": "3_basics/index.html#slides",
+    "href": "3_basics/index.html#slides",
+    "title": "Basics",
     "section": "",
     "text": "View slides in full screen"
-  },
-  {
-    "objectID": "1_setup/1-setup.html#lets-setup-all-the-tools",
-    "href": "1_setup/1-setup.html#lets-setup-all-the-tools",
-    "title": "Setup",
-    "section": "Let’s Setup all the tools",
-    "text": "Let’s Setup all the tools\n\nQuarto\nVS Code extensions\nJupyter plugin\ngh cli for GitHub"
-  },
-  {
-    "objectID": "1_setup/1-setup.html#quarto",
-    "href": "1_setup/1-setup.html#quarto",
-    "title": "Setup",
-    "section": "Quarto",
-    "text": "Quarto\n\nStable: https://quarto.org/docs/get-started/\nPre-release: https://quarto.org/docs/download/prerelease\n\nRead the pre-release highlights to get a sense of new features"
-  },
-  {
-    "objectID": "1_setup/1-setup.html#resources",
-    "href": "1_setup/1-setup.html#resources",
-    "title": "Setup",
-    "section": "Resources",
-    "text": "Resources\nThe best way to learn is by example. Here are the best examples:\n\nThe Official website - Click “Edit this page” to see the source.\nThe Gallery\n\n\n\n\n\n\n\nTip\n\n\nIf no “Edit this page” button, you can search a user’s GitHub like this:\nowner:username path:_quarto.yml\nExample"
-  },
-  {
-    "objectID": "1_setup/1-setup.html#its-ok-to-copy",
-    "href": "1_setup/1-setup.html#its-ok-to-copy",
-    "title": "Setup",
-    "section": "It’s ok to copy!",
-    "text": "It’s ok to copy!\nPrior to this talk, I had had never made slides in Quarto, let alone embed them in a website. I followed Andrew Bray’s tutorial by modifying his code.\n\n\nHamel Husain"
   },
   {
     "objectID": "5_publishing/5-pub.html#background",
@@ -144,7 +67,35 @@
     "href": "5_publishing/5-pub.html#github-actions",
     "title": "Publishing",
     "section": "GitHub Actions",
-    "text": "GitHub Actions\nSee this repo, specifically this example:\nname: pub\non: \n    push:\n        branches: main\n\njobs:\n    pub:\n        runs-on: ubuntu-latest\n        steps:\n        - name: Check out repository\n          uses: actions/checkout@v4\n        - name: setup Python\n          uses: actions/setup-python@v3\n        - name: install Jupyter\n          run: python3 -m pip install jupyter\n        - name: Install Quarto\n          uses: quarto-dev/quarto-actions/setup@v2\n        - name: Publish to GitHub Pages (and render)\n          uses: quarto-dev/quarto-actions/publish@v2\n          with:\n            target: gh-pages\n\n\nHamel Husain"
+    "text": "GitHub Actions\nSee this repo, specifically this example:\nname: pub\non: \n    push:\n        branches: main\n\njobs:\n    pub:\n        permissions:\n            contents: write\n            pages: write\n        runs-on: ubuntu-latest\n        steps:\n        - name: Check out repository\n          uses: actions/checkout@v4\n        - name: setup Python\n          uses: actions/setup-python@v3\n        - name: install Jupyter\n          run: python3 -m pip install jupyter\n        - name: Install Quarto\n          uses: quarto-dev/quarto-actions/setup@v2\n        - name: Publish to GitHub Pages (and render)\n          uses: quarto-dev/quarto-actions/publish@v2\n          with:\n            target: gh-pages\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto For Python Devs",
+    "section": "",
+    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter Notebooks and Quarto with the help of nbdev."
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "Quarto For Python Devs",
+    "section": "Instructor",
+    "text": "Instructor\nHamel is a founder at Parlance, a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his personal site."
+  },
+  {
+    "objectID": "4_config/index.html",
+    "href": "4_config/index.html",
+    "title": "Configuration and Options",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "4_config/index.html#slides",
+    "href": "4_config/index.html#slides",
+    "title": "Configuration and Options",
+    "section": "",
+    "text": "View slides in full screen"
   },
   {
     "objectID": "4_config/4-config.html#hierachy",
@@ -210,6 +161,27 @@
     "text": "Make your code more visibile\nUse GitHub links:\nwebsite:\n  repo-url: https://github.com/quarto-dev/quarto-demo\n  repo-actions: [edit, issue]\nYou can also set a specific branch, ex: repo-branch: master.\n\n\nHamel Husain"
   },
   {
+    "objectID": "5_publishing/index.html",
+    "href": "5_publishing/index.html",
+    "title": "Publishing",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "5_publishing/index.html#slides",
+    "href": "5_publishing/index.html#slides",
+    "title": "Publishing",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "3_basics/demo.html",
+    "href": "3_basics/demo.html",
+    "title": "Demo Quarto Notebook",
+    "section": "",
+    "text": "a = 10\nb = 20\n\n\nimport pandas as pd\npd.DataFrame({\"a\": [1,2,3], \"b\": [4,5,6]})"
+  },
+  {
     "objectID": "3_basics/3-basics.html#create-a-new-project-website",
     "href": "3_basics/3-basics.html#create-a-new-project-website",
     "title": "Basics",
@@ -257,5 +229,33 @@
     "title": "Basics",
     "section": "Using Notebooks",
     "text": "Using Notebooks\nJupyterLab extension.\n\nRenders Quarto elements like Callouts, Divs, Mermaid, Front matter, etc.\nThe VSCode plugin is more fully featured. Use this if you prefer JupyterLab.\nStill get code block contextual help.\n\nRecommendation: Use VSCode Notebooks if possible (you also get CoPilot there).\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "1_setup/1-setup.html#lets-setup-all-the-tools",
+    "href": "1_setup/1-setup.html#lets-setup-all-the-tools",
+    "title": "Setup",
+    "section": "Let’s Setup all the tools",
+    "text": "Let’s Setup all the tools\n\nQuarto\nVS Code extensions\nJupyter plugin\ngh cli for GitHub"
+  },
+  {
+    "objectID": "1_setup/1-setup.html#quarto",
+    "href": "1_setup/1-setup.html#quarto",
+    "title": "Setup",
+    "section": "Quarto",
+    "text": "Quarto\n\nStable: https://quarto.org/docs/get-started/\nPre-release: https://quarto.org/docs/download/prerelease\n\nRead the pre-release highlights to get a sense of new features"
+  },
+  {
+    "objectID": "1_setup/1-setup.html#resources",
+    "href": "1_setup/1-setup.html#resources",
+    "title": "Setup",
+    "section": "Resources",
+    "text": "Resources\nThe best way to learn is by example. Here are the best examples:\n\nThe Official website - Click “Edit this page” to see the source.\nThe Gallery\n\n\n\n\n\n\n\nTip\n\n\nIf no “Edit this page” button, you can search a user’s GitHub like this:\nowner:username path:_quarto.yml\nExample"
+  },
+  {
+    "objectID": "1_setup/1-setup.html#its-ok-to-copy",
+    "href": "1_setup/1-setup.html#its-ok-to-copy",
+    "title": "Setup",
+    "section": "It’s ok to copy!",
+    "text": "It’s ok to copy!\nPrior to this talk, I had had never made slides in Quarto, let alone embed them in a website. I followed Andrew Bray’s tutorial by modifying his code.\n\n\nHamel Husain"
   }
 ]

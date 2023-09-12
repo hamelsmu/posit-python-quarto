@@ -60,7 +60,7 @@ quarto publish
 Make sure you enable GitHub Pages in your repo settings.
 :::
 
-## GitHub Actions
+## GitHub Actions {.smaller}
 
 See [this repo](https://github.com/quarto-dev/quarto-actions/tree/main/publish), specifically [this example](https://github.com/quarto-dev/quarto-actions/blob/main/examples/quarto-publish-example.yml):
 

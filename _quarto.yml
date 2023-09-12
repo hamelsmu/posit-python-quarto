@@ -1,5 +1,9 @@
 project:
   type: website
+  output-dir: _site
+
+execute:
+  eval: false
 
 website:
   page-navigation: true
@@ -27,6 +31,10 @@ website:
         href: 2_intro/index.qmd
       - text: Basics
         href: 3_basics/index.qmd
+      - text: Config & Options
+        href: 4_config/index.qmd
+      - text: Publishing
+        href: 5_publishing/index.qmd
 
 format:
   html:
@@ -34,5 +42,4 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-  revealjs: 
-    code-line-numbers: false
+    

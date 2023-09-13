@@ -1,0 +1,12 @@
+---
+title: "Notebook Filters & Render Scripts"
+order: 6
+---
+
+## Slides
+
+[View slides in full screen](6-filter.qmd)
+
+```{=html}
+<iframe class="slide-deck" src="6-filter.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```

@@ -161,11 +161,11 @@ Also see the [project guide](https://quarto.org/docs/projects/quarto-projects.ht
 :::
 :::
 
-## Using VSCode
+## Using VSCode {.smaller}
 
-When authoring `_quarto.yml` or `.qmd` files, its best to use VSCode with the [Quarto extension](https://quarto.org/docs/tools/vscode.html).
+- When authoring `_quarto.yml` or `.qmd` files, its best to use VSCode with the [Quarto extension](https://quarto.org/docs/tools/vscode.html).
 
-We will Demo this by opening the [source code](https://github.com/hamelsmu/posit-python-quarto/blob/main/3_basics/3-basics.qmd).
+- Demo this by opening the [source code](https://github.com/hamelsmu/posit-python-quarto/blob/main/3_basics/3-basics.qmd).
 
 - Code blocks
 

@@ -1,0 +1,141 @@
+---
+title: "Notebook filters & render scripts"
+subtitle: "Accessible tools that allow you to customize and extend Quarto."
+footer: "[Hamel Husain](https://hamel.dev)"
+format:
+  revealjs:
+    code-line-numbers: false
+    author:
+      - "Hamel Husain"
+    scrollable: true
+    institute: "Parlance Labs"
+    transition: fade
+    slide-number: true
+    chalkboard: false
+    theme: [../style/quarto.scss, ../style/slides.scss]
+---
+
+## Different ways to customize Quarto
+
+#### Pandoc Required
+- [Shortcodes](https://quarto.org/docs/extensions/shortcodes.html)
+- [Pandoc Filters](https://quarto.org/docs/extensions/filters.html)
+
+#### Do not need Pandoc
+- [Notebook Filters](https://quarto.org/docs/extensions/nbfilter.html)
+- [Render Scripts](https://quarto.org/docs/projects/scripts.html)
+
+We will cover the last two.
+
+
+## What are notebook filters?
+
+See [the docs](https://quarto.org/docs/extensions/nbfilter.html)
+
+- Modify notebooks programatically before they are rendered
+- A quick way to customize Quarto.  
+- Add special directives:
+  - `#|hide` to hide cells
+  - delete sensitive information
+
+Read from `stdin` and write to `stdout`.
+
+## Hello-World Filter {.smaller}
+
+The filter
+
+```{.python filename="filter.py"}
+import sys
+import nbformat
+
+# read notebook from stdin
+nb = nbformat.reads(sys.stdin.read(), as_version = 4)
+
+# prepend a comment to the source of each cell
+for index, cell in enumerate(nb.cells):
+  if cell.cell_type == 'code':
+     if "#|hide" in cell.source:
+        # delete cell
+        del nb.cells[index]
+        
+# write notebook to stdout 
+nbformat.write(nb, sys.stdout)
+```
+<br>
+
+The project config:
+
+```{.yaml filename="_quarto.yml"}
+ipynb-filters:
+  - 6_filter/filter.py
+```
+
+## Deubgging Notebook Filters {.smaller}
+
+::: {.fragment .fade-in-then-semi-out}
+From [this repo](https://github.com/hamelsmu/posit-python-quarto/tree/main):
+
+```bash
+cd 6_filter/
+cat filter_demo.ipynb | python filter.py
+```
+
+Does the notebook look like you expect?  Prototype on a minimal notebook first!
+:::
+
+
+::: {.fragment .fade-in-then-semi-out}
+Save the notebook:
+
+```bash
+cat filter_demo.ipynb | python filter.py > test.ipynb
+```
+Open the notebook in JupyterLab or VSCode.
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Let me show you live!
+:::
+
+::: {.callout-tip}
+### Set breakpoints
+
+It is useful to put breakpoints in your filter script to learn the `nbformat` API.
+:::
+
+## Let's try it
+
+```bash
+quarto preview filter_demo.ipynb
+```
+
+## Notebook filter tips
+
+- Search the Quarto docs before reaching for a filter
+- I've needed them less and less as Quarto has matured
+- I currently use them to [handle edge cases](https://github.com/hamelsmu/hamel/blob/master/quarto_filter.py) that you are likely not going to encounter.
+
+Let's see how [other people](https://github.com/search?q=ipynb-filters%3A+language%3Ayaml++path%3A_quarto.yml&type=code) are using them.  I [found this](https://github.com/eu-cdse/documentation/blob/publish/notebook_filter.py).
+
+
+## Render Scripts
+
+These are not like notebook filters, but they are a way to run arbitrary code before a project is rendered.
+
+See [this documentation](https://quarto.org/docs/projects/scripts.html#pre-and-post-render).  
+
+I don't use these personally!  But let's see [what other people are doing](https://github.com/search?q=pre-render+language%3Ayml+path%3A_quarto.yml&type=code).  
+
+[This example](https://github.com/bambinos/bambi/tree/main/docs) is interesting.
+
+
+## Pandoc Filters (Lua)
+
+- Background on [Pandoc](https://pandoc.org/)
+- This is advanced, not going to cover it except for mentioning some references.
+- Lua filters have the upshot that the runtime is included with Quarto, so its easier to distribute.
+
+Resources:
+
+- [Pandoc filters](https://pandoc.org/filters.html)
+- [Panflute tutorial](https://hamel.dev/notes/pandoc/index.html)

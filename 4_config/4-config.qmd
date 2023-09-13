@@ -181,3 +181,9 @@ website:
 ```
 
 You can also set a specific branch, ex: `repo-branch: master`.
+
+## Other important tips
+
+- If using notebooks, front matter goes in a `raw` cell! (Show you)
+- You can [embed notebook cells](https://quarto.org/docs/authoring/notebook-embed.html#cell-tags) in `.qmd` files which allows you to get the best of both worlds.
+- Use the features of the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto-dev.quarto-vscode) for VSCode.

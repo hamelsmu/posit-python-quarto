@@ -66,28 +66,41 @@ See [this repo](https://github.com/quarto-dev/quarto-actions/tree/main/publish),
 
 ```yaml
 name: pub
-on: 
-    push:
-        branches: main
-
+on:                        # <1>
+    push:                  # <1>
+        branches: main     # <1>
 jobs:
     pub:
-        permissions:
-            contents: write
-            pages: write
+        permissions:             # <2>
+            contents: write      # <2>
+            pages: write         # <2>
         runs-on: ubuntu-latest
         steps:
-        - name: Check out repository
-          uses: actions/checkout@v4
-        - name: setup Python
-          uses: actions/setup-python@v3
-        - name: install Jupyter
-          run: python3 -m pip install jupyter
-        - name: Install Quarto
-          uses: quarto-dev/quarto-actions/setup@v2
-        - name: Publish to GitHub Pages (and render)
-          uses: quarto-dev/quarto-actions/publish@v2
-          with:
-            target: gh-pages
+        - name: Check out repository  # <3>
+          uses: actions/checkout@v4   # <3>
+        - name: setup Python          # <4>
+          uses: actions/setup-python@v3 # <4>
+        - name: install Jupyter        # <5>
+          run: python3 -m pip install jupyter # <5>
+        - name: Install Quarto                     # <6>
+          uses: quarto-dev/quarto-actions/setup@v2 # <6>
+        - name: Publish to GitHub Pages (and render) # <7>
+          uses: quarto-dev/quarto-actions/publish@v2 # <7>
+          with:                                      # <7>
+            target: gh-pages                         # <7>
 ```
+
+See [my code](https://github.com/hamelsmu/posit-python-quarto/blob/main/.github/workflows/pub.yml). **Remember: Enable GitHub Pages in your repo settings.**
+
+
+## Have some fun
+
+You can render or preview single files with `quarto render` or `quarto preview`.
+
+[hamelsmu/quarto-render](https://github.com/hamelsmu/quarto-render/tree/main).
+
+Example:
+
+[http://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb](http://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb)
+
 

@@ -5,6 +5,9 @@ project:
 execute:
   eval: false
 
+ipynb-filters:
+  - 6_filter/filter.py
+
 website:
   page-navigation: true
   repo-actions: [edit, issue]
@@ -37,6 +40,8 @@ website:
         href: 4_config/index.qmd
       - text: Publishing
         href: 5_publishing/index.qmd
+      - text: Nb Filters & Render Scripts
+        href: 6_filter/index.qmd
 
 format:
   html:

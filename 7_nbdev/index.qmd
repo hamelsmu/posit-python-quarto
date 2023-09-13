@@ -1,0 +1,10 @@
+---
+title: "nbdev"
+order: 7
+---
+
+## Slides
+
+[View slides in full screen](https://docs.google.com/presentation/d/1cdAon3RDFeHQ4bDuT8TLPkR9Mjivvs89OZ7dcGmNl4o/edit?usp=sharing)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSONn1oUcs0W4gzccWX9crbAaNvnokADRBCHjJNS4JCy3zkAzTbuPOCEB2CdaBD5e3UE5kGES3fEtL8/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

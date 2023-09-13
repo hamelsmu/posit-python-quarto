@@ -1,0 +1,6 @@
+---
+title: "Slides"
+order: 8
+---
+
+Emil Hansen will share his slides the day of.

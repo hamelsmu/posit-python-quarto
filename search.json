@@ -245,6 +245,13 @@
     "text": "GitHub Actions\nSee this repo, specifically this example:\nname: pub\non:\n    push:\n        branches: main\njobs:\n    pub:\n        permissions:\n            contents: write\n            pages: write\n        runs-on: ubuntu-latest\n        steps:\n        - name: Check out repository\n          uses: actions/checkout@v4\n        - name: setup Python\n          uses: actions/setup-python@v3\n        - name: install Jupyter\n          run: python3 -m pip install jupyter\n        - name: Install Quarto\n          uses: quarto-dev/quarto-actions/setup@v2\n        - name: Publish to GitHub Pages (and render)\n          uses: quarto-dev/quarto-actions/publish@v2\n          with:\n            target: gh-pages\nSee my code. Remember: Enable GitHub Pages in your repo settings."
   },
   {
+    "objectID": "5_publishing/5-pub.html#what-i-do",
+    "href": "5_publishing/5-pub.html#what-i-do",
+    "title": "Publishing",
+    "section": "What I do",
+    "text": "What I do\n\nI am an expert at GitHub Actions, but I still prefer to use quarto publish.\nI’ve found that iterating on GitHub Actions can waste a lot of time.\n\nFor larger projects with multiple collaborators, I would use the GitHub Actions approach."
+  },
+  {
     "objectID": "5_publishing/5-pub.html#have-some-fun",
     "href": "5_publishing/5-pub.html#have-some-fun",
     "title": "Publishing",

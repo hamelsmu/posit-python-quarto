@@ -93,6 +93,12 @@ jobs:
 See [my code](https://github.com/hamelsmu/posit-python-quarto/blob/main/.github/workflows/pub.yml). **Remember: Enable GitHub Pages in your repo settings.**
 
 
+## What I do {.smaller}
+
+- I am an expert at GitHub Actions, but I still prefer to use `quarto publish`.
+- I've found that iterating on GitHub Actions can waste a lot of time.  
+- For larger projects with multiple collaborators, I would use the GitHub Actions approach.
+
 ## Have some fun
 
 You can render or preview single files with `quarto render` or `quarto preview`.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto for Python devs - Configuration and Options</title>
+<title>Quarto for Python devs - Notebook Filters &amp; Render Scripts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../5_publishing/index.html" rel="next">
-<link href="../3_basics/index.html" rel="prev">
+<link href="../5_publishing/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -63,7 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Quarto for Python devs - Configuration and Options">
+<meta property="og:title" content="Quarto for Python devs - Notebook Filters &amp; Render Scripts">
 <meta property="og:description" content="">
 <meta property="og:site-name" content="Quarto for Python devs">
 </head>
@@ -77,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../4_config/index.html">Config &amp; Options</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../6_filter/index.html">Nb Filters &amp; Render Scripts</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -128,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../4_config/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../4_config/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Config &amp; Options</span></a>
   </div>
 </li>
@@ -140,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../6_filter/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../6_filter/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Nb Filters &amp; Render Scripts</span></a>
   </div>
 </li>
@@ -156,14 +155,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hamelsmu/posit-python-quarto/edit/main/4_config/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/hamelsmu/posit-python-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hamelsmu/posit-python-quarto/edit/main/6_filter/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/hamelsmu/posit-python-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Configuration and Options</h1>
+<h1 class="title">Notebook Filters &amp; Render Scripts</h1>
 </div>
 
 
@@ -180,8 +179,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p><a href="../4_config/4-config.html">View slides in full screen</a></p>
-<iframe class="slide-deck" src="4-config.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<p><a href="../6_filter/6-filter.html">View slides in full screen</a></p>
+<iframe class="slide-deck" src="6-filter.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 
 
 </section>
@@ -422,14 +421,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../3_basics/index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Basics</span>
+      <a href="../5_publishing/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Publishing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../5_publishing/index.html" class="pagination-link">
-        <span class="nav-page-text">Publishing</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

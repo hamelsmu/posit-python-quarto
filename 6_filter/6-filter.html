@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Hamel Husain">
-  <title>Quarto for Python devs - Config &amp; Options</title>
+  <title>Quarto for Python devs - Notebook filters &amp; render scripts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -385,8 +385,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Quarto for Python devs - Config &amp; Options">
-<meta property="og:description" content="Important Options and Config for Python Devs">
+<meta property="og:title" content="Quarto for Python devs - Notebook filters &amp; render scripts">
+<meta property="og:description" content="Accessible tools that allow you to customize and extend Quarto.">
 <meta property="og:site-name" content="Quarto for Python devs">
 </head>
 <body class="quarto-light">
@@ -394,8 +394,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Config &amp; Options</h1>
-  <p class="subtitle">Important Options and Config for Python Devs</p>
+  <h1 class="title">Notebook filters &amp; render scripts</h1>
+  <p class="subtitle">Accessible tools that allow you to customize and extend Quarto.</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -409,177 +409,129 @@ Hamel Husain
 </div>
 
 </section>
-<section id="hierachy" class="slide level2">
-<h2>Hierachy</h2>
-<p><strong>Cells &gt; Front Matter &gt; Project Level</strong></p>
-<p>For example, see the <a href="https://quarto.org/docs/reference/">reference docs</a>:</p>
+<section id="different-ways-to-customize-quarto" class="slide level2">
+<h2>Different ways to customize Quarto</h2>
+<h4 id="pandoc-required">Pandoc Required</h4>
 <ul>
-<li><strong>Cells</strong>: see <a href="https://quarto.org/docs/reference/cells/">code cells</a>.</li>
-<li><strong>Front matter</strong>: see <a href="https://quarto.org/docs/reference/formats/html.html">HTML format</a>.</li>
-<li><strong>Project Level</strong>: see <a href="https://quarto.org/docs/reference/projects/websites.html">project options</a> some of these can also live in front-matter.</li>
+<li><a href="https://quarto.org/docs/extensions/shortcodes.html">Shortcodes</a></li>
+<li><a href="https://quarto.org/docs/extensions/filters.html">Pandoc Filters</a></li>
 </ul>
-<p>There is overlap! See <code>echo:false</code> in cell options, vs <code>execute: echo:false</code> in <a href="https://quarto.org/docs/reference/formats/html.html#execution">front matter</a>.</p>
+<h4 id="do-not-need-pandoc">Do not need Pandoc</h4>
+<ul>
+<li><a href="https://quarto.org/docs/extensions/nbfilter.html">Notebook Filters</a></li>
+<li><a href="https://quarto.org/docs/projects/scripts.html">Render Scripts</a></li>
+</ul>
+<p>We will cover the last two.</p>
 </section>
-<section id="directory-level-config" class="slide level2">
-<h2>Directory Level Config</h2>
+<section id="what-are-notebook-filters" class="slide level2">
+<h2>What are notebook filters?</h2>
+<p>See <a href="https://quarto.org/docs/extensions/nbfilter.html">the docs</a></p>
 <ul>
-<li>Use <code>_metadata.yml</code>, which gets <a href="https://quarto.org/docs/projects/quarto-projects.html#metadata-merging">merged</a>.</li>
-<li>The more specific config controls (cell &gt; front matter &gt; project).</li>
-<li>Breaking <code>_quarto.yml</code> into <a href="https://quarto.org/docs/projects/quarto-projects.html#metadata-includes">multiple files</a> using <code>metadata-files: [config.yml]</code>.
+<li>Modify notebooks programatically before they are rendered</li>
+<li>A quick way to customize Quarto.<br>
+</li>
+<li>Add special directives:
 <ul>
-<li>This can also be used in front matter: see <a href="https://github.com/hamelsmu/hamel/blob/master/notes/llm/inference/index.qmd">this example</a>, which you can also find in <a href="https://quarto.org/docs/reference/formats/html.html#metadata">the docs</a>.</li>
+<li><code>#|hide</code> to hide cells</li>
+<li>delete sensitive information</li>
 </ul></li>
 </ul>
+<p>Read from <code>stdin</code> and write to <code>stdout</code>.</p>
 </section>
-<section id="cell-options" class="slide level2 smaller">
-<h2>Cell Options</h2>
-<p>Use the <code>#|</code> syntax to specify cell options:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="hello-world-filter" class="slide level2 smaller">
+<h2>Hello-World Filter</h2>
+<p>The filter</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>filter.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nbformat</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># read notebook from stdin</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> nbformat.reads(sys.stdin.read(), as_version <span class="op">=</span> <span class="dv">4</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># prepend a comment to the source of each cell</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, cell <span class="kw">in</span> <span class="bu">enumerate</span>(nb.cells):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> cell.cell_type <span class="op">==</span> <span class="st">'code'</span>:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span> <span class="st">"#|hide"</span> <span class="kw">in</span> cell.source:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># delete cell</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">del</span> nb.cells[index]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># write notebook to stdout </span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>nbformat.write(nb, sys.stdout)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p><br></p>
-<h4 id="my-favorite-cell-options">My favorite cell options:</h4>
-<ul>
-<li><code>eval</code>: evaluate code cells</li>
-<li><code>echo</code>: show/hide code cells</li>
-<li><code>output</code>: show/hide cell output</li>
-<li><code>include</code>: show/hide cell input &amp; output (catch-all)</li>
-</ul>
-<p>See <a href="https://quarto.org/docs/reference/cells/cells-jupyter.html">more</a>.</p>
+<p>The project config:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ipynb-filters</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> 6_filter/filter.py</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="deubgging-notebook-filters" class="slide level2 smaller">
+<h2>Deubgging Notebook Filters</h2>
+<div class="fragment fade-in-then-semi-out">
+<p>From <a href="https://github.com/hamelsmu/posit-python-quarto/tree/main">this repo</a>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> 6_filter/</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> filter_demo.ipynb <span class="kw">|</span> <span class="ex">python</span> filter.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Does the notebook look like you expect? Prototype on a minimal notebook first!</p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p>Save the notebook:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> filter_demo.ipynb <span class="kw">|</span> <span class="ex">python</span> filter.py <span class="op">&gt;</span> test.ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Open the notebook in JupyterLab or VSCode.</p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p>Let me show you live!</p>
+</div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Look at the source</strong></p>
+<p><strong>Set breakpoints</strong></p>
 </div>
 <div class="callout-content">
-<p>I looked at <a href="https://quarto.org/docs/authoring/notebook-embed.html#embedding-code">this page</a> when making this slide.</p>
+<p>It is useful to put breakpoints in your filter script to learn the <code>nbformat</code> API.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="execution-options" class="slide level2 smaller">
-<h2>Execution Options</h2>
-<p><a href="https://quarto.org/docs/computations/execution-options.html#engine-binding">Engine binding</a>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">kernelspec</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">display_name</span><span class="kw">:</span><span class="at"> Python 3</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">language</span><span class="kw">:</span><span class="at"> python</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> python3</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><a href="https://quarto.org/docs/computations/execution-options.html#output-options">Output Options</a>:</p>
-<p>As an example, let’s consider <code>echo:false</code>, this can also be in front matter:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>quarto.yml</strong></pre>
-</div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<h3 id="freezing">Freezing</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # never re-render during project render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span><span class="co"> # re-render ONLY if source changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="lets-try-it" class="slide level2">
+<h2>Let’s try it</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview filter_demo.ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="jupyter-cache" class="slide level2">
-<h2>Jupyter Cache</h2>
-<p>To use Jupyter Cache you’ll want to first install the <code>jupyter-cache</code> package:</p>
-<table style="width:93%;">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 66%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Platform</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Mac/Linux</td>
-<td><div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter-cache</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></td>
-</tr>
-<tr class="even">
-<td>Windows</td>
-<td><div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>py <span class="op">-</span>m pip install jupyter<span class="op">-</span>cache</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="jupyter-cache-options" class="slide level2 smaller">
-<h2>Jupyter Cache Options</h2>
-<p>To enable the cache for a document, add the <code>cache</code> option. For example:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cache</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can also specify caching at the project level in the <code>_quarto.yml</code> file:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cache</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>And also at a cell level:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| cache: true</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(): ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>See <a href="https://quarto.org/docs/reference/formats/html.html#execution">execution options</a>.</p>
-</section>
-<section id="new-features-in-quarto-1.4" class="slide level2">
-<h2>New features in Quarto 1.4</h2>
+<section id="notebook-filter-tips" class="slide level2">
+<h2>Notebook filter tips</h2>
 <ul>
-<li><a href="https://quarto.org/docs/prerelease/1.4/inline.html">Inline Execution</a></li>
-<li><a href="https://quarto.org/docs/prerelease/1.4/script.html">Rendering script files</a></li>
+<li>Search the Quarto docs before reaching for a filter</li>
+<li>I’ve needed them less and less as Quarto has matured</li>
+<li>I currently use them to <a href="https://github.com/hamelsmu/hamel/blob/master/quarto_filter.py">handle edge cases</a> that you are likely not going to encounter.</li>
 </ul>
-<p>See the release notes <a href="https://quarto.org/docs/download/prerelease.html">here</a> and <a href="https://github.com/quarto-dev/quarto-cli/releases">on GitHub</a>.</p>
+<p>Let’s see how <a href="https://github.com/search?q=ipynb-filters%3A+language%3Ayaml++path%3A_quarto.yml&amp;type=code">other people</a> are using them. I <a href="https://github.com/eu-cdse/documentation/blob/publish/notebook_filter.py">found this</a>.</p>
 </section>
-<section id="what-i-do-as-a-python-developer" class="slide level2 smaller">
-<h2>What I do as a Python developer</h2>
-<ol type="1">
-<li>Use notebooks anytime there is code.</li>
-<li>Use <code>.qmd</code> with VSCode if not much code.</li>
-<li>Use <a href="https://quarto.org/docs/reference/cells/cells-jupyter.html">cell options</a> heavily.</li>
-<li>Sometimes, I want to disable an entire notebook from running, so I use <code>execute: false</code> in front matter.</li>
-</ol>
-<div class="sourceCode" id="cb11"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">eval</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="5" type="1">
-<li>Using shell commands with iPython magic with <code>!</code>.</li>
-<li><strong>Most importantly: look at examples!</strong></li>
-</ol>
-
-<aside><div>
+<section id="render-scripts" class="slide level2">
+<h2>Render Scripts</h2>
+<p>These are not like notebook filters, but they are a way to run arbitrary code before a project is rendered.</p>
+<p>See <a href="https://quarto.org/docs/projects/scripts.html#pre-and-post-render">this documentation</a>.</p>
+<p>I don’t use these personally! But let’s see <a href="https://github.com/search?q=pre-render+language%3Ayml+path%3A_quarto.yml&amp;type=code">what other people are doing</a>.</p>
+<p><a href="https://github.com/bambinos/bambi/tree/main/docs">This example</a> is interesting.</p>
+</section>
+<section id="pandoc-filters-lua" class="slide level2">
+<h2>Pandoc Filters (Lua)</h2>
 <ul>
-<li><p>I like <code>#|eval: false</code> in notebooks, b/c unlike <code>.qmd</code>, output is saved.</p></li>
-<li><p>I also helped develop a way to develop entire Python libraries with notebooks that leverages Quarto called <a href="https://quarto.org/docs/prerelease/1.4/script.html">nbdev</a>, which I’ll talk about in the afternoon.</p></li>
+<li>Background on <a href="https://pandoc.org/">Pandoc</a></li>
+<li>This is advanced, not going to cover it except for mentioning some references.</li>
+<li>Lua filters have the upshot that the runtime is included with Quarto, so its easier to distribute.</li>
 </ul>
-</div></aside></section>
-<section id="make-your-code-more-visibile" class="slide level2">
-<h2>Make your code more visibile</h2>
-<p>Use <a href="https://quarto.org/docs/websites/website-navigation.html#github-links">GitHub links</a>:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">repo-url</span><span class="kw">:</span><span class="at"> https://github.com/quarto-dev/quarto-demo</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">repo-actions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">edit</span><span class="kw">,</span><span class="at"> issue</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can also set a specific branch, ex: <code>repo-branch: master</code>.</p>
-</section>
-<section id="other-important-tips" class="slide level2">
-<h2>Other important tips</h2>
+<p>Resources:</p>
 <ul>
-<li>If using notebooks, front matter goes in a <code>raw</code> cell! (Show you)</li>
-<li>You can <a href="https://quarto.org/docs/authoring/notebook-embed.html#cell-tags">embed notebook cells</a> in <code>.qmd</code> files which allows you to get the best of both worlds.</li>
-<li>Use the features of the <a href="https://marketplace.visualstudio.com/items?itemName=quarto-dev.quarto-vscode">Quarto extension</a> for VSCode.</li>
+<li><a href="https://pandoc.org/filters.html">Pandoc filters</a></li>
+<li><a href="https://hamel.dev/notes/pandoc/index.html">Panflute tutorial</a></li>
 </ul>
 
 <div class="footer footer-default">

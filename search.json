@@ -42,79 +42,100 @@
     "text": "View slides in full screen"
   },
   {
-    "objectID": "6_filter/filter_demo.html",
-    "href": "6_filter/filter_demo.html",
-    "title": "Quarto for Python devs",
-    "section": "",
-    "text": "print('you should be able to see this in the notebook')\n\nyou should be able to see this in the notebook"
-  },
-  {
-    "objectID": "6_filter/6-filter.html#different-ways-to-customize-quarto",
-    "href": "6_filter/6-filter.html#different-ways-to-customize-quarto",
-    "title": "Notebook filters & render scripts",
-    "section": "Different ways to customize Quarto",
-    "text": "Different ways to customize Quarto\nPandoc Required\n\nShortcodes\nPandoc Filters\n\nDo not need Pandoc\n\nNotebook Filters\nRender Scripts\n\nWe will cover the last two."
-  },
-  {
-    "objectID": "6_filter/6-filter.html#what-are-notebook-filters",
-    "href": "6_filter/6-filter.html#what-are-notebook-filters",
-    "title": "Notebook filters & render scripts",
-    "section": "What are notebook filters?",
-    "text": "What are notebook filters?\nSee the docs\n\nModify notebooks programatically before they are rendered\nA quick way to customize Quarto.\n\nAdd special directives:\n\n#|hide to hide cells\ndelete sensitive information\n\n\nRead from stdin and write to stdout."
-  },
-  {
-    "objectID": "6_filter/6-filter.html#hello-world-filter",
-    "href": "6_filter/6-filter.html#hello-world-filter",
-    "title": "Notebook filters & render scripts",
-    "section": "Hello-World Filter",
-    "text": "Hello-World Filter\nThe filter\n\n\nfilter.py\n\nimport sys\nimport nbformat\n\n# read notebook from stdin\nnb = nbformat.reads(sys.stdin.read(), as_version = 4)\n\n# prepend a comment to the source of each cell\nfor index, cell in enumerate(nb.cells):\n  if cell.cell_type == 'code':\n     if \"#|hide\" in cell.source:\n        # delete cell\n        del nb.cells[index]\n        \n# write notebook to stdout \nnbformat.write(nb, sys.stdout)\n\n\nThe project config:\n\n\n_quarto.yml\n\nipynb-filters:\n  - 6_filter/filter.py"
-  },
-  {
-    "objectID": "6_filter/6-filter.html#deubgging-notebook-filters",
-    "href": "6_filter/6-filter.html#deubgging-notebook-filters",
-    "title": "Notebook filters & render scripts",
-    "section": "Deubgging Notebook Filters",
-    "text": "Deubgging Notebook Filters\n\nFrom this repo:\ncd 6_filter/\ncat filter_demo.ipynb | python filter.py\nDoes the notebook look like you expect? Prototype on a minimal notebook first!\n\n\nSave the notebook:\ncat filter_demo.ipynb | python filter.py &gt; test.ipynb\nOpen the notebook in JupyterLab or VSCode.\n\n\nLet me show you live!\n\n\n\n\n\n\n\nSet breakpoints\n\n\nIt is useful to put breakpoints in your filter script to learn the nbformat API."
-  },
-  {
-    "objectID": "6_filter/6-filter.html#lets-try-it",
-    "href": "6_filter/6-filter.html#lets-try-it",
-    "title": "Notebook filters & render scripts",
-    "section": "Let’s try it",
-    "text": "Let’s try it\nquarto preview filter_demo.ipynb"
-  },
-  {
-    "objectID": "6_filter/6-filter.html#notebook-filter-tips",
-    "href": "6_filter/6-filter.html#notebook-filter-tips",
-    "title": "Notebook filters & render scripts",
-    "section": "Notebook filter tips",
-    "text": "Notebook filter tips\n\nSearch the Quarto docs before reaching for a filter\nI’ve needed them less and less as Quarto has matured\nI currently use them to handle edge cases that you are likely not going to encounter.\n\nLet’s see how other people are using them. I found this."
-  },
-  {
-    "objectID": "6_filter/6-filter.html#render-scripts",
-    "href": "6_filter/6-filter.html#render-scripts",
-    "title": "Notebook filters & render scripts",
-    "section": "Render Scripts",
-    "text": "Render Scripts\nThese are not like notebook filters, but they are a way to run arbitrary code before a project is rendered.\nSee this documentation.\nI don’t use these personally! But let’s see what other people are doing.\nThis example is interesting."
-  },
-  {
-    "objectID": "6_filter/6-filter.html#pandoc-filters-lua",
-    "href": "6_filter/6-filter.html#pandoc-filters-lua",
-    "title": "Notebook filters & render scripts",
-    "section": "Pandoc Filters (Lua)",
-    "text": "Pandoc Filters (Lua)\n\nBackground on Pandoc\nThis is advanced, not going to cover it except for mentioning some references.\nLua filters have the upshot that the runtime is included with Quarto, so its easier to distribute.\n\nResources:\n\nPandoc filters\nPanflute tutorial\n\n\n\nHamel Husain"
-  },
-  {
-    "objectID": "5_publishing/index.html",
-    "href": "5_publishing/index.html",
-    "title": "Publishing",
+    "objectID": "7_nbdev/index.html",
+    "href": "7_nbdev/index.html",
+    "title": "nbdev",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "5_publishing/index.html#slides",
-    "href": "5_publishing/index.html#slides",
+    "objectID": "7_nbdev/index.html#slides",
+    "href": "7_nbdev/index.html#slides",
+    "title": "nbdev",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "6_filter/index.html",
+    "href": "6_filter/index.html",
+    "title": "Notebook Filters & Render Scripts",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "6_filter/index.html#slides",
+    "href": "6_filter/index.html#slides",
+    "title": "Notebook Filters & Render Scripts",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#background",
+    "href": "5_publishing/5-pub.html#background",
     "title": "Publishing",
+    "section": "Background",
+    "text": "Background\n\nRender your site quarto render\n\nThis put static files in _site/ by default, but can change it with the output-dir setting:\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: _site\n\n\nThe _site/ folder is a static site you can deploy anywhere. Ex: python -m http.server --d _site/\nPreview your site quarto preview"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#intro",
+    "href": "5_publishing/5-pub.html#intro",
+    "title": "Publishing",
+    "section": "Intro",
+    "text": "Intro\nEasiest way to get started:\nquarto publish --help\nBuilt in targets:\n\nQuarto Pub (quarto-pub)\nGitHub Pages (gh-pages)\nPosit Connect (connect)\nNetlify (netlify)\nConfluence (confluence)"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#github-pages",
+    "href": "5_publishing/5-pub.html#github-pages",
+    "title": "Publishing",
+    "section": "GitHub Pages",
+    "text": "GitHub Pages\n\nIt’s free\nCannot get private pages without paying.\n\nquarto publish\n\n\n\n\n\n\nEnable GitHub Pages\n\n\nMake sure you enable GitHub Pages in your repo settings."
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#github-actions",
+    "href": "5_publishing/5-pub.html#github-actions",
+    "title": "Publishing",
+    "section": "GitHub Actions",
+    "text": "GitHub Actions\nSee this repo, specifically this example:\nname: pub\non:\n    push:\n        branches: main\njobs:\n    pub:\n        permissions:\n            contents: write\n            pages: write\n        runs-on: ubuntu-latest\n        steps:\n        - name: Check out repository\n          uses: actions/checkout@v4\n        - name: setup Python\n          uses: actions/setup-python@v3\n        - name: install Jupyter\n          run: python3 -m pip install jupyter\n        - name: Install Quarto\n          uses: quarto-dev/quarto-actions/setup@v2\n        - name: Publish to GitHub Pages (and render)\n          uses: quarto-dev/quarto-actions/publish@v2\n          with:\n            target: gh-pages\nSee my code. Remember: Enable GitHub Pages in your repo settings."
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#what-i-do",
+    "href": "5_publishing/5-pub.html#what-i-do",
+    "title": "Publishing",
+    "section": "What I do",
+    "text": "What I do\n\nI am an expert at GitHub Actions, but I still prefer to use quarto publish.\nI’ve found that iterating on GitHub Actions can waste a lot of time.\n\nFor larger projects with multiple collaborators, I would use the GitHub Actions approach."
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#have-some-fun",
+    "href": "5_publishing/5-pub.html#have-some-fun",
+    "title": "Publishing",
+    "section": "Have some fun",
+    "text": "Have some fun\nYou can render or preview single files with quarto render or quarto preview.\nhamelsmu/quarto-render.\nExample:\nhttp://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto For Python Devs",
+    "section": "",
+    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter Notebooks and Quarto with the help of nbdev."
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "Quarto For Python Devs",
+    "section": "Instructor",
+    "text": "Instructor\nHamel is a founder at Parlance, a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his personal site."
+  },
+  {
+    "objectID": "4_config/index.html",
+    "href": "4_config/index.html",
+    "title": "Configuration and Options",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "4_config/index.html#slides",
+    "href": "4_config/index.html#slides",
+    "title": "Configuration and Options",
     "section": "",
     "text": "View slides in full screen"
   },
@@ -189,88 +210,81 @@
     "text": "Other important tips\n\nIf using notebooks, front matter goes in a raw cell! (Show you)\nYou can embed notebook cells in .qmd files which allows you to get the best of both worlds.\nUse the features of the Quarto extension for VSCode.\n\n\n\nHamel Husain"
   },
   {
-    "objectID": "4_config/index.html",
-    "href": "4_config/index.html",
-    "title": "Configuration and Options",
+    "objectID": "5_publishing/index.html",
+    "href": "5_publishing/index.html",
+    "title": "Publishing",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "4_config/index.html#slides",
-    "href": "4_config/index.html#slides",
-    "title": "Configuration and Options",
+    "objectID": "5_publishing/index.html#slides",
+    "href": "5_publishing/index.html#slides",
+    "title": "Publishing",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Quarto For Python Devs",
+    "objectID": "6_filter/6-filter.html#different-ways-to-customize-quarto",
+    "href": "6_filter/6-filter.html#different-ways-to-customize-quarto",
+    "title": "Notebook filters & render scripts",
+    "section": "Different ways to customize Quarto",
+    "text": "Different ways to customize Quarto\nPandoc Required\n\nShortcodes\nPandoc Filters\n\nDo not need Pandoc\n\nNotebook Filters\nRender Scripts\n\nWe will cover the last two."
+  },
+  {
+    "objectID": "6_filter/6-filter.html#what-are-notebook-filters",
+    "href": "6_filter/6-filter.html#what-are-notebook-filters",
+    "title": "Notebook filters & render scripts",
+    "section": "What are notebook filters?",
+    "text": "What are notebook filters?\nSee the docs\n\nModify notebooks programatically before they are rendered\nA quick way to customize Quarto.\n\nAdd special directives:\n\n#|hide to hide cells\ndelete sensitive information\n\n\nRead from stdin and write to stdout."
+  },
+  {
+    "objectID": "6_filter/6-filter.html#hello-world-filter",
+    "href": "6_filter/6-filter.html#hello-world-filter",
+    "title": "Notebook filters & render scripts",
+    "section": "Hello-World Filter",
+    "text": "Hello-World Filter\nThe filter\n\n\nfilter.py\n\nimport sys\nimport nbformat\n\n# read notebook from stdin\nnb = nbformat.reads(sys.stdin.read(), as_version = 4)\n\n# prepend a comment to the source of each cell\nfor index, cell in enumerate(nb.cells):\n  if cell.cell_type == 'code':\n     if \"#|hide\" in cell.source:\n        # delete cell\n        del nb.cells[index]\n        \n# write notebook to stdout \nnbformat.write(nb, sys.stdout)\n\n\nThe project config:\n\n\n_quarto.yml\n\nipynb-filters:\n  - 6_filter/filter.py"
+  },
+  {
+    "objectID": "6_filter/6-filter.html#deubgging-notebook-filters",
+    "href": "6_filter/6-filter.html#deubgging-notebook-filters",
+    "title": "Notebook filters & render scripts",
+    "section": "Deubgging Notebook Filters",
+    "text": "Deubgging Notebook Filters\n\nFrom this repo:\ncd 6_filter/\ncat filter_demo.ipynb | python filter.py\nDoes the notebook look like you expect? Prototype on a minimal notebook first!\n\n\nSave the notebook:\ncat filter_demo.ipynb | python filter.py &gt; test.ipynb\nOpen the notebook in JupyterLab or VSCode.\n\n\nLet me show you live!\n\n\n\n\n\n\n\nSet breakpoints\n\n\nIt is useful to put breakpoints in your filter script to learn the nbformat API."
+  },
+  {
+    "objectID": "6_filter/6-filter.html#lets-try-it",
+    "href": "6_filter/6-filter.html#lets-try-it",
+    "title": "Notebook filters & render scripts",
+    "section": "Let’s try it",
+    "text": "Let’s try it\nquarto preview filter_demo.ipynb"
+  },
+  {
+    "objectID": "6_filter/6-filter.html#notebook-filter-tips",
+    "href": "6_filter/6-filter.html#notebook-filter-tips",
+    "title": "Notebook filters & render scripts",
+    "section": "Notebook filter tips",
+    "text": "Notebook filter tips\n\nSearch the Quarto docs before reaching for a filter\nI’ve needed them less and less as Quarto has matured\nI currently use them to handle edge cases that you are likely not going to encounter.\n\nLet’s see how other people are using them. I found this."
+  },
+  {
+    "objectID": "6_filter/6-filter.html#render-scripts",
+    "href": "6_filter/6-filter.html#render-scripts",
+    "title": "Notebook filters & render scripts",
+    "section": "Render Scripts",
+    "text": "Render Scripts\nThese are not like notebook filters, but they are a way to run arbitrary code before a project is rendered.\nSee this documentation.\nI don’t use these personally! But let’s see what other people are doing.\nThis example is interesting."
+  },
+  {
+    "objectID": "6_filter/6-filter.html#pandoc-filters-lua",
+    "href": "6_filter/6-filter.html#pandoc-filters-lua",
+    "title": "Notebook filters & render scripts",
+    "section": "Pandoc Filters (Lua)",
+    "text": "Pandoc Filters (Lua)\n\nBackground on Pandoc\nThis is advanced, not going to cover it except for mentioning some references.\nLua filters have the upshot that the runtime is included with Quarto, so its easier to distribute.\n\nResources:\n\nPandoc filters\nPanflute tutorial\n\n\n\nHamel Husain"
+  },
+  {
+    "objectID": "6_filter/filter_demo.html",
+    "href": "6_filter/filter_demo.html",
+    "title": "Quarto for Python devs",
     "section": "",
-    "text": "9:00 AM - 5:00 PM CDT Monday, Sep 18, 2023\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a wider audience, build upon existing work, and collaborate with others in their field. However, until recently, there have been limited options for publishing long-form writing and expository analyses authored in Jupyter Notebooks, a popular medium for data scientists.\nEnter Quarto - an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and other popular mediums. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible and shareable. With Quarto, researchers can turn their Jupyter Notebooks into professional-looking publications in a variety of formats, including web pages, books, and slides.\nIn this workshop, we will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality websites, blog posts, and other shareable artifacts. As a bonus, we will also discuss how you can create and document Python packages using Jupyter Notebooks and Quarto with the help of nbdev."
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "Quarto For Python Devs",
-    "section": "Instructor",
-    "text": "Instructor\nHamel is a founder at Parlance, a research lab and consultancy focused on large language models. Prior to Parlance, Hamel was a machine learning engineer at companies like Airbnb, GitHub, and DataRobot. You can find more about Hamel on his personal site."
-  },
-  {
-    "objectID": "5_publishing/5-pub.html#background",
-    "href": "5_publishing/5-pub.html#background",
-    "title": "Publishing",
-    "section": "Background",
-    "text": "Background\n\nRender your site quarto render\n\nThis put static files in _site/ by default, but can change it with the output-dir setting:\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n  output-dir: _site\n\n\nThe _site/ folder is a static site you can deploy anywhere. Ex: python -m http.server --d _site/\nPreview your site quarto preview"
-  },
-  {
-    "objectID": "5_publishing/5-pub.html#intro",
-    "href": "5_publishing/5-pub.html#intro",
-    "title": "Publishing",
-    "section": "Intro",
-    "text": "Intro\nEasiest way to get started:\nquarto publish --help\nBuilt in targets:\n\nQuarto Pub (quarto-pub)\nGitHub Pages (gh-pages)\nPosit Connect (connect)\nNetlify (netlify)\nConfluence (confluence)"
-  },
-  {
-    "objectID": "5_publishing/5-pub.html#github-pages",
-    "href": "5_publishing/5-pub.html#github-pages",
-    "title": "Publishing",
-    "section": "GitHub Pages",
-    "text": "GitHub Pages\n\nIt’s free\nCannot get private pages without paying.\n\nquarto publish\n\n\n\n\n\n\nEnable GitHub Pages\n\n\nMake sure you enable GitHub Pages in your repo settings."
-  },
-  {
-    "objectID": "5_publishing/5-pub.html#github-actions",
-    "href": "5_publishing/5-pub.html#github-actions",
-    "title": "Publishing",
-    "section": "GitHub Actions",
-    "text": "GitHub Actions\nSee this repo, specifically this example:\nname: pub\non:\n    push:\n        branches: main\njobs:\n    pub:\n        permissions:\n            contents: write\n            pages: write\n        runs-on: ubuntu-latest\n        steps:\n        - name: Check out repository\n          uses: actions/checkout@v4\n        - name: setup Python\n          uses: actions/setup-python@v3\n        - name: install Jupyter\n          run: python3 -m pip install jupyter\n        - name: Install Quarto\n          uses: quarto-dev/quarto-actions/setup@v2\n        - name: Publish to GitHub Pages (and render)\n          uses: quarto-dev/quarto-actions/publish@v2\n          with:\n            target: gh-pages\nSee my code. Remember: Enable GitHub Pages in your repo settings."
-  },
-  {
-    "objectID": "5_publishing/5-pub.html#what-i-do",
-    "href": "5_publishing/5-pub.html#what-i-do",
-    "title": "Publishing",
-    "section": "What I do",
-    "text": "What I do\n\nI am an expert at GitHub Actions, but I still prefer to use quarto publish.\nI’ve found that iterating on GitHub Actions can waste a lot of time.\n\nFor larger projects with multiple collaborators, I would use the GitHub Actions approach."
-  },
-  {
-    "objectID": "5_publishing/5-pub.html#have-some-fun",
-    "href": "5_publishing/5-pub.html#have-some-fun",
-    "title": "Publishing",
-    "section": "Have some fun",
-    "text": "Have some fun\nYou can render or preview single files with quarto render or quarto preview.\nhamelsmu/quarto-render.\nExample:\nhttp://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb\n\n\nHamel Husain"
-  },
-  {
-    "objectID": "6_filter/index.html",
-    "href": "6_filter/index.html",
-    "title": "Notebook Filters & Render Scripts",
-    "section": "",
-    "text": "View slides in full screen"
-  },
-  {
-    "objectID": "6_filter/index.html#slides",
-    "href": "6_filter/index.html#slides",
-    "title": "Notebook Filters & Render Scripts",
-    "section": "",
-    "text": "View slides in full screen"
+    "text": "print('you should be able to see this in the notebook')\n\nyou should be able to see this in the notebook"
   },
   {
     "objectID": "3_basics/demo.html",

@@ -187,3 +187,12 @@ You can also set a specific branch, ex: `repo-branch: master`.
 - If using notebooks, front matter goes in a `raw` cell! (Show you)
 - You can [embed notebook cells](https://quarto.org/docs/authoring/notebook-embed.html#cell-tags) in `.qmd` files which allows you to get the best of both worlds.
 - Use the features of the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto-dev.quarto-vscode) for VSCode.
+
+## Exercise
+
+1. Create a new project with `quarto new` and add a notebook.
+2. Create a separate `metadata.yml` file with configuration.
+3. Create a blog listings section.
+4. Create a notes section with a hierarchy represented with folders. [Example](https://hamel.dev/notes/)
+5. Take an example from [Wasim's page](https://wasimlorgat.com/) and adapt it to your own site.
+6. Turn on comments for your blog posts.

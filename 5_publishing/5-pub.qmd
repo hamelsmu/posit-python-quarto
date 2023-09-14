@@ -110,3 +110,9 @@ Example:
 [http://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb](http://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb)
 
 
+## Exercise
+
+1. Create a new GitHub repo
+2. Publish your site with the CLI to GitHub Pages
+3. Setup GitHub Actions to publish your site to GitHub Pages for you
+

@@ -132,10 +132,15 @@ I don't use these personally!  But let's see [what other people are doing](https
 ## Pandoc Filters (Lua)
 
 - Background on [Pandoc](https://pandoc.org/)
-- This is advanced, not going to cover it except for mentioning some references.
-- Lua filters have the upshot that the runtime is included with Quarto, so its easier to distribute.
+- This is advanced; not going to cover it except for mentioning some references.
+- Lua filters have the upshot that the runtime is included with Quarto, so it's easier to distribute.
 
 Resources:
 
 - [Pandoc filters](https://pandoc.org/filters.html)
 - [Panflute tutorial](https://hamel.dev/notes/pandoc/index.html)
+
+## Exercise
+
+1. Create a notebook filter that deletes all cell outputs that contain phone numbers (use a regex).
+2. Create a pre-render script that warns you if a notebook does not contain a front matter (raw cell) as its first cell.

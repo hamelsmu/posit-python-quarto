@@ -205,3 +205,13 @@ JupyterLab [extension](https://quarto.org/docs/tools/jupyter-lab-extension.html)
 
 Recommendation: Use VSCode Notebooks if possible (you also get CoPilot there).
 
+## Exercise
+
+1. Create a new Quarto website and preview it locally.
+2. Edit the `_quarto.yml` file to change the title of the website.
+3. Edit the `_quarto.yml` file to change the theme of the website.
+4. Author a new `.qmd` file and preview it locally.
+5. Author a page as a Jupyter Notebook and preview it locally.
+6. Hide the code output of a code block.
+7. Enable table of contents for a page.
+

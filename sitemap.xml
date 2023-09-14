@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/2_intro/index.html</loc>
-    <lastmod>2023-09-14T06:31:28.488Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/1_setup/1-setup.html</loc>
-    <lastmod>2023-09-14T06:31:27.908Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/3-basics.html</loc>
-    <lastmod>2023-09-14T06:31:27.320Z</lastmod>
-  </url>
-  <url>
     <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/demo.html</loc>
-    <lastmod>2023-09-14T06:31:23.095Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/6_filter/filter_demo.html</loc>
-    <lastmod>2023-09-14T06:31:22.263Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/6_filter/6-filter.html</loc>
-    <lastmod>2023-09-14T06:31:20.751Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/5_publishing/index.html</loc>
-    <lastmod>2023-09-14T06:31:19.959Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/4_config/4-config.html</loc>
-    <lastmod>2023-09-14T06:31:18.907Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/4_config/index.html</loc>
-    <lastmod>2023-09-14T06:31:17.339Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/index.html</loc>
-    <lastmod>2023-09-14T06:31:19.651Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/5_publishing/5-pub.html</loc>
-    <lastmod>2023-09-14T06:31:20.363Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/6_filter/index.html</loc>
-    <lastmod>2023-09-14T06:31:21.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/hamelsmu/posit-python-quarto/7_nbdev/index.html</loc>
-    <lastmod>2023-09-14T06:31:22.551Z</lastmod>
+    <lastmod>2023-09-14T06:32:00.911Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/index.html</loc>
-    <lastmod>2023-09-14T06:31:23.615Z</lastmod>
+    <lastmod>2023-09-14T06:31:55.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/6_filter/filter_demo.html</loc>
+    <lastmod>2023-09-14T06:31:55.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/6_filter/index.html</loc>
+    <lastmod>2023-09-14T06:31:53.218Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/4_config/4-config.html</loc>
+    <lastmod>2023-09-14T06:31:52.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/5_publishing/5-pub.html</loc>
+    <lastmod>2023-09-14T06:31:51.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/1_setup/1-setup.html</loc>
+    <lastmod>2023-09-14T06:31:50.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/2_intro/index.html</loc>
+    <lastmod>2023-09-14T06:31:48.894Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/index.html</loc>
+    <lastmod>2023-09-14T06:31:48.230Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/hamelsmu/posit-python-quarto/1_setup/index.html</loc>
-    <lastmod>2023-09-14T06:31:27.612Z</lastmod>
+    <lastmod>2023-09-14T06:31:49.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/5_publishing/index.html</loc>
+    <lastmod>2023-09-14T06:31:51.290Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/4_config/index.html</loc>
+    <lastmod>2023-09-14T06:31:52.030Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/7_nbdev/index.html</loc>
+    <lastmod>2023-09-14T06:31:52.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/6_filter/6-filter.html</loc>
+    <lastmod>2023-09-14T06:31:53.651Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/hamelsmu/posit-python-quarto/8_slides/index.html</loc>
-    <lastmod>2023-09-14T06:31:28.196Z</lastmod>
+    <lastmod>2023-09-14T06:31:55.403Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/hamelsmu/posit-python-quarto/3_basics/3-basics.html</loc>
+    <lastmod>2023-09-14T06:32:00.327Z</lastmod>
   </url>
 </urlset>

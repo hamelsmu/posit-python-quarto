@@ -39,7 +39,7 @@
     "href": "1_setup/1-setup.html#its-ok-to-copy",
     "title": "Setup",
     "section": "It’s ok to copy!",
-    "text": "It’s ok to copy!\nPrior to this talk, I had had never made slides in Quarto, let alone embed them in a website. I followed Andrew Bray’s tutorial by modifying his code.\n\n\nHamel Husain"
+    "text": "It’s ok to copy!\nPrior to this talk, I had had never made slides in Quarto, let alone embed them in a website. I followed Andrew Bray’s tutorial by modifying his code.\n\n\nHamel Husain | Home"
   },
   {
     "objectID": "3_basics/3-basics.html#create-a-new-project-website",
@@ -95,7 +95,7 @@
     "href": "3_basics/3-basics.html#exercise",
     "title": "Basics",
     "section": "Exercise",
-    "text": "Exercise\n\nCreate a new Quarto website and preview it locally.\nEdit the _quarto.yml file to change the title of the website.\nEdit the _quarto.yml file to change the theme of the website.\nAuthor a new .qmd file and preview it locally.\nAuthor a page as a Jupyter Notebook and preview it locally.\nHide the code output of a code block.\nEnable table of contents for a page.\nClone the repo for this tutorial and add a navbar.\n\n\n\nHamel Husain"
+    "text": "Exercise\n\nCreate a new Quarto website and preview it locally.\nEdit the _quarto.yml file to change the title of the website.\nEdit the _quarto.yml file to change the theme of the website.\nAuthor a new .qmd file and preview it locally.\nAuthor a page as a Jupyter Notebook and preview it locally.\nHide the code output of a code block.\nEnable table of contents for a page.\nClone the repo for this tutorial and add a navbar.\n\n\n\nHamel Husain | Home"
   },
   {
     "objectID": "3_basics/demo.html",
@@ -172,7 +172,7 @@
     "href": "6_filter/6-filter.html#exercise",
     "title": "Notebook filters & render scripts",
     "section": "Exercise",
-    "text": "Exercise\n\nCreate a notebook filter that deletes all cell outputs that contain phone numbers (use a regex).\nCreate a pre-render script that warns you if a notebook does not contain a front matter (raw cell) as its first cell.\n\n\n\nHamel Husain"
+    "text": "Exercise\n\nCreate a notebook filter that deletes all cell outputs that contain phone numbers (use a regex).\nCreate a pre-render script that warns you if a notebook does not contain a front matter (raw cell) as its first cell.\n\n\n\nHamel Husain | Home"
   },
   {
     "objectID": "5_publishing/index.html",
@@ -263,7 +263,7 @@
     "href": "4_config/4-config.html#exercise",
     "title": "Config & Options",
     "section": "Exercise",
-    "text": "Exercise\n\nCreate a new project with quarto new and add a notebook.\nCreate a separate metadata.yml file with configuration.\nCreate a blog listings section.\nCreate a notes section with a hierarchy represented with folders. Example\nTake an example from Wasim’s page and adapt it to your own site.\nTurn on comments for your blog posts.\n\n\n\nHamel Husain"
+    "text": "Exercise\n\nCreate a new project with quarto new and add a notebook.\nCreate a separate metadata.yml file with configuration.\nCreate a blog listings section.\nCreate a notes section with a hierarchy represented with folders. Example\nTake an example from Wasim’s page and adapt it to your own site.\nTurn on comments for your blog posts.\n\n\n\nHamel Husain | Home"
   },
   {
     "objectID": "4_config/index.html",
@@ -340,7 +340,7 @@
     "href": "5_publishing/5-pub.html#exercise",
     "title": "Publishing",
     "section": "Exercise",
-    "text": "Exercise\n\nCreate a new GitHub repo\nPublish your site with the CLI to GitHub Pages\nSetup GitHub Actions to publish your site to GitHub Pages for you\n\n\n\nHamel Husain"
+    "text": "Exercise\n\nCreate a new GitHub repo\nPublish your site with the CLI to GitHub Pages\nSetup GitHub Actions to publish your site to GitHub Pages for you\n\n\n\nHamel Husain | Home"
   },
   {
     "objectID": "6_filter/index.html",

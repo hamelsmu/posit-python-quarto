@@ -88,7 +88,14 @@
     "href": "3_basics/3-basics.html#using-notebooks",
     "title": "Basics",
     "section": "Using Notebooks",
-    "text": "Using Notebooks\nJupyterLab extension.\n\nRenders Quarto elements like Callouts, Divs, Mermaid, Front matter, etc.\nThe VSCode plugin is more fully featured. Use this if you prefer JupyterLab.\nStill get code block contextual help.\n\nRecommendation: Use VSCode Notebooks if possible (you also get CoPilot there).\n\n\nHamel Husain"
+    "text": "Using Notebooks\nJupyterLab extension.\n\nRenders Quarto elements like Callouts, Divs, Mermaid, Front matter, etc.\nThe VSCode plugin is more fully featured. Use this if you prefer JupyterLab.\nStill get code block contextual help.\n\nRecommendation: Use VSCode Notebooks if possible (you also get CoPilot there)."
+  },
+  {
+    "objectID": "3_basics/3-basics.html#exercise",
+    "href": "3_basics/3-basics.html#exercise",
+    "title": "Basics",
+    "section": "Exercise",
+    "text": "Exercise\n\nCreate a new Quarto website and preview it locally.\nEdit the _quarto.yml file to change the title of the website.\nEdit the _quarto.yml file to change the theme of the website.\nAuthor a new .qmd file and preview it locally.\nAuthor a page as a Jupyter Notebook and preview it locally.\nHide the code output of a code block.\nEnable table of contents for a page.\n\n\n\nHamel Husain"
   },
   {
     "objectID": "3_basics/demo.html",
@@ -158,7 +165,14 @@
     "href": "6_filter/6-filter.html#pandoc-filters-lua",
     "title": "Notebook filters & render scripts",
     "section": "Pandoc Filters (Lua)",
-    "text": "Pandoc Filters (Lua)\n\nBackground on Pandoc\nThis is advanced, not going to cover it except for mentioning some references.\nLua filters have the upshot that the runtime is included with Quarto, so its easier to distribute.\n\nResources:\n\nPandoc filters\nPanflute tutorial\n\n\n\nHamel Husain"
+    "text": "Pandoc Filters (Lua)\n\nBackground on Pandoc\nThis is advanced; not going to cover it except for mentioning some references.\nLua filters have the upshot that the runtime is included with Quarto, so it’s easier to distribute.\n\nResources:\n\nPandoc filters\nPanflute tutorial"
+  },
+  {
+    "objectID": "6_filter/6-filter.html#exercise",
+    "href": "6_filter/6-filter.html#exercise",
+    "title": "Notebook filters & render scripts",
+    "section": "Exercise",
+    "text": "Exercise\n\nCreate a notebook filter that deletes all cell outputs that contain phone numbers (use a regex).\nCreate a pre-render script that warns you if a notebook does not contain a front matter (raw cell) as its first cell.\n\n\n\nHamel Husain"
   },
   {
     "objectID": "5_publishing/index.html",
@@ -242,7 +256,14 @@
     "href": "4_config/4-config.html#other-important-tips",
     "title": "Config & Options",
     "section": "Other important tips",
-    "text": "Other important tips\n\nIf using notebooks, front matter goes in a raw cell! (Show you)\nYou can embed notebook cells in .qmd files which allows you to get the best of both worlds.\nUse the features of the Quarto extension for VSCode.\n\n\n\nHamel Husain"
+    "text": "Other important tips\n\nIf using notebooks, front matter goes in a raw cell! (Show you)\nYou can embed notebook cells in .qmd files which allows you to get the best of both worlds.\nUse the features of the Quarto extension for VSCode."
+  },
+  {
+    "objectID": "4_config/4-config.html#exercise",
+    "href": "4_config/4-config.html#exercise",
+    "title": "Config & Options",
+    "section": "Exercise",
+    "text": "Exercise\n\nCreate a new project with quarto new and add a notebook.\nCreate a separate metadata.yml file with configuration.\nCreate a blog listings section.\nCreate a notes section with a hierarchy represented with folders. Example\nTake an example from Wasim’s page and adapt it to your own site.\nTurn on comments for your blog posts.\n\n\n\nHamel Husain"
   },
   {
     "objectID": "4_config/index.html",
@@ -312,7 +333,14 @@
     "href": "5_publishing/5-pub.html#have-some-fun",
     "title": "Publishing",
     "section": "Have some fun",
-    "text": "Have some fun\nYou can render or preview single files with quarto render or quarto preview.\nhamelsmu/quarto-render.\nExample:\nhttp://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb\n\n\nHamel Husain"
+    "text": "Have some fun\nYou can render or preview single files with quarto render or quarto preview.\nhamelsmu/quarto-render.\nExample:\nhttp://127.0.0.1:8000/render/https://github.com/huggingface/notebooks/blob/main/examples/tokenizer_training.ipynb"
+  },
+  {
+    "objectID": "5_publishing/5-pub.html#exercise",
+    "href": "5_publishing/5-pub.html#exercise",
+    "title": "Publishing",
+    "section": "Exercise",
+    "text": "Exercise\n\nCreate a new GitHub repo\nPublish your site with the CLI to GitHub Pages\nSetup GitHub Actions to publish your site to GitHub Pages for you\n\n\n\nHamel Husain"
   },
   {
     "objectID": "6_filter/index.html",

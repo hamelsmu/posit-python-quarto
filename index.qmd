@@ -3,7 +3,7 @@ title: "Quarto For Python Devs"
 subtitle: "Posit::Conf 2023"
 format:
   html:
-    toc: false
+    toc: true
 ---
 
 

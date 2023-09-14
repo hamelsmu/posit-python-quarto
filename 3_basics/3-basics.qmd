@@ -214,4 +214,4 @@ Recommendation: Use VSCode Notebooks if possible (you also get CoPilot there).
 5. Author a page as a Jupyter Notebook and preview it locally.
 6. Hide the code output of a code block.
 7. Enable table of contents for a page.
-
+8. Clone [the repo](https://github.com/hamelsmu/posit-python-quarto) for this tutorial and add a navbar.

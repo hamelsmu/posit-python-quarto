@@ -1,9 +1,9 @@
 ---
 title: "Setup"
 subtitle: "Setting up your environment"
-footer: "[Hamel Husain](https://hamel.dev)"
 format:
   revealjs:
+    footer: "[Hamel Husain](https://hamel.dev) | [Home](https://bit.ly/pyquarto)"
     code-line-numbers: false
     author:
       - "Hamel Husain"

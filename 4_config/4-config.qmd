@@ -1,10 +1,11 @@
 ---
 title: "Config & Options"
 subtitle: "Important Options and Config for Python Devs"
-footer: "[Hamel Husain](https://hamel.dev)"
+footer: "[Hamel Husain](https://hamel.dev) | [Home](https://bit.ly/pyquarto)"
 format:
   revealjs:
     code-line-numbers: false
+    footer: "[Hamel Husain](https://hamel.dev) | [Home](https://bit.ly/pyquarto)"
     author:
       - "Hamel Husain"
     scrollable: true

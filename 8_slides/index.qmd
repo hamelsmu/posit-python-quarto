@@ -3,4 +3,8 @@ title: "Slides"
 order: 8
 ---
 
-Emil Hansen will share his slides the day of.
+[View slides in full screen](https://emilhvitfeldt.github.io/talk-positconf2023-101-slides/)
+
+```{=html}
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/talk-positconf2023-101-slides/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
